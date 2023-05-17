@@ -711,11 +711,15 @@ h6 {
 }
 
 #about p {
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 20px;
     color: #fff;
 }
 
+#about li {
+    font-size: 18px;
+    padding: 5px 0px;
+}
 /*--------------------------------------------------------------
 # committees li Section
 --------------------------------------------------------------*/
