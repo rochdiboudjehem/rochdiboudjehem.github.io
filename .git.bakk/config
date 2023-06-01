@@ -1,0 +1,16 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/ncneti23/ncneti23.github.io.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[remote "ncneti23"]
+	url = ncneti23
+	fetch = +refs/heads/*:refs/remotes/ncneti23/*
+[remote "main"]
+	url = https://github.com/rochdiboudjehem/rochdiboudjehem.github.io
+	fetch = +refs/heads/*:refs/remotes/main/*
