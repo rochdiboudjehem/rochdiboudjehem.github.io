@@ -2,7 +2,9 @@ export const cvData = {
   personal: {
     name: "Dr. Rochdi Boudjehem",
     title: "PhD in Computer Science",
-    position: "Asscociate Professor",
+    born: "",
+    status: "",
+    position: "Associate Professor",
     department: "Computer Science Department",
     institution: "University of 8 Mai 1945 Guelma, Algeria"
   },
