@@ -1,0 +1,53 @@
+import { Box, Heading, VStack, Link, Text, Icon, Divider } from "@chakra-ui/react";
+import { SiGooglescholar, SiOrcid, SiScopus, SiWebofscience, SiResearchgate, SiAcademia } from "react-icons/si";
+
+const academicAccounts = [
+  {
+    label: "Academia.edu",
+    url: "https://guelma.academia.edu/RochdiBoudjehem",
+    icon: SiAcademia,
+  },
+  {
+    label: "Google Scholar",
+    url: "https://scholar.google.com/citations?user=CXoCLWIAAAAJ&hl=en",
+    icon: SiGooglescholar,
+  },
+  {
+    label: "ORCID",
+    url: "https://orcid.org/0000-0002-9998-4833",
+    icon: SiOrcid,
+  },
+  {
+    label: "Scopus",
+    url: "http://scopus.com/authid/detail.uri?authorId=57468903100",
+    icon: SiScopus,
+  },
+  {
+    label: "Web of Science",
+    url: "https://www.webofscience.com/wos/author/record/ABC-4157-2021",
+    icon: SiWebofscience,
+  },
+  {
+    label: "ResearchGate",
+    url: "https://www.researchgate.net/profile/Rochdi-Boudjehem",
+    icon: SiResearchgate,
+  },
+];
+
+const ContactSidebar = () => (
+  <Box as="aside" w={{ base: "100%", md: 64 }} p={4} bg="white" _dark={{ bg: "gray.800" }} borderRadius="lg" boxShadow="md" mb={{ base: 8, md: 0 }}>
+    <Heading as="h3" size="md" mb={4} color="teal.600">Academic Accounts</Heading>
+    <VStack align="start" spacing={3}>
+      {academicAccounts.map((acc) => (
+        <Link key={acc.label} href={acc.url} isExternal display="flex" alignItems="center" color="gray.700" _dark={{ color: "gray.200" }} fontWeight="medium">
+          <Icon as={acc.icon} boxSize={6} mr={2} color="teal.500" />
+          <Text as="span">{acc.label}</Text>
+        </Link>
+      ))}
+    </VStack>
+    <Divider my={4} />
+    {/* Social and Other sections can be added here */}
+  </Box>
+);
+
+export default ContactSidebar;
