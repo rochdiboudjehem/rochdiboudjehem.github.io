@@ -1,21 +1,40 @@
-import React, { useState, type ReactNode } from "react";
+import { ReactNode, useState } from "react";
 
 interface CVSectionProps {
+  id?: string;
   title: ReactNode;
   children: ReactNode;
   defaultOpen?: boolean;
+  isOpen?: boolean;
+  onToggle?: (id: string) => void;
 }
 
-const CVSection: React.FC<CVSectionProps> = ({ title, children, defaultOpen = false }) => {
-  const [open, setOpen] = useState(defaultOpen);
+const CVSection: React.FC<CVSectionProps> = ({ 
+  id, 
+  title, 
+  children, 
+  defaultOpen = false,
+  isOpen,
+  onToggle 
+}) => {
+  const [localOpen, setLocalOpen] = useState(defaultOpen);
+  const isExpanded = isOpen ?? localOpen;
+
+  const handleClick = () => {
+    if (onToggle && id) {
+      onToggle(id);
+    } else {
+      setLocalOpen(v => !v);
+    }
+  };
 
   return (
-    <div className="cv-section">
-      <div className="section-header" onClick={() => setOpen((v) => !v)}>
-        <span style={{ marginRight: 8 }}>{open ? "▼" : "►"}</span>
+    <div id={id} className="cv-section">
+      <div className="section-header" onClick={handleClick}>
+        <span style={{ marginRight: 8 }}>{isExpanded ? "▼" : "►"}</span>
         {title}
       </div>
-      {open && <div className="section-content">{children}</div>}
+      {isExpanded && <div className="section-content">{children}</div>}
     </div>
   );
 };

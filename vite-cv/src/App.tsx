@@ -8,14 +8,32 @@ import CVSection from "./components/CVSection";
 import Navbar from "./components/Navbar";
 import ExperienceItem from "./components/ExperienceItem";
 import ProjectItem from "./components/ProjectItem";
+import React, { useState } from 'react';
 
 function App() {
   const { personal, contacts, academicAccounts, social, education, experience, projects, skills, publications, conferences, languages, certificates, other } = cvData;
+  const [openSection, setOpenSection] = useState<string | null>(null);  // Add this line
   
+  const handleSectionClick = (sectionId: string) => {    // Add this function
+    setOpenSection(sectionId);
+  };  
 
   return (
     <>
       <Navbar />
+      <div className="section-menu-container" style={{ background: "#f8f8f8", padding: "8px 0", borderBottom: "1px solid #ddd" }}>
+        <nav className="section-menu" style={{ display: "flex", justifyContent: "center", gap: 24, flexWrap: "wrap" }}>
+          <a href="#education"          onClick={() => handleSectionClick('education')} className="section-link"><i className="fas fa-graduation-cap icon" /> Education</a>
+          <a href="#experience"         onClick={() => handleSectionClick('experience')} className="section-link"><i className="fas fa-briefcase icon" /> Experience</a>
+          <a href="#projects"           onClick={() => handleSectionClick('projects')} className="section-link"><i className="fas fa-diagram-project icon" /> Projects</a>
+          <a href="#skills"             onClick={() => handleSectionClick('skills')} className="section-link"><i className="fas fa-code icon" /> Skills</a>
+          <a href="#publications"       onClick={() => handleSectionClick('publications')} className="section-link"><i className="fas fa-book icon" /> Publications</a>
+          <a href="#conferences"        onClick={() => handleSectionClick('conferences')} className="section-link"><i className="fas fa-chalkboard-teacher icon" /> Conferences</a>
+          <a href="#languages"          onClick={() => handleSectionClick('languages')} className="section-link"><i className="fas fa-language icon" /> Languages</a>
+          <a href="#certificates"       onClick={() => handleSectionClick('certificates')} className="section-link"><i className="fas fa-certificate icon" /> Certificates</a>
+          <a href="#other"              onClick={() => handleSectionClick('other')} className="section-link"><i className="fas fa-ellipsis-h icon" /> Other</a>
+        </nav>
+      </div>
       <div className="cv-container">
 
         <div className="header">
@@ -29,7 +47,11 @@ function App() {
               <div><b>Position:</b> {personal.position}</div>
               <div><b>Department:</b> {personal.department}</div>
               <div><b>Institution:</b> {personal.institution}</div>
-
+                <div>
+                  <i className="fas fa-phone icon" /> {contacts.phone}
+                  &nbsp; | &nbsp;&nbsp;<i className="fas fa-map-marker-alt icon" /> {contacts.address}
+                </div>
+              <hr style={{ margin: '3px 0', border: 0, borderTop: '1px solid #ccc' }} />
               <div className="contact-section" >
                 {/* <div>
                   <i className="fas fa-envelope icon" /> <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
@@ -136,10 +158,7 @@ function App() {
                   </a>
                   )}
                 </div>
-                <div>
-                  <i className="fas fa-phone icon" /> {contacts.phone}
-                  &nbsp; | &nbsp;&nbsp;<i className="fas fa-map-marker-alt icon" /> {contacts.address}
-                </div>
+
 
 
 
@@ -154,7 +173,11 @@ function App() {
             </div>
           </div>
         </div>
-        <CVSection title={<><i className="fas fa-graduation-cap icon" />Education</>} defaultOpen>
+        <CVSection id="education" 
+        title={<><i className="fas fa-graduation-cap icon" />Education</>}
+        isOpen={openSection === 'education'}
+        onToggle={handleSectionClick}>
+        
           <ul>
             {education.map((e, i) => (
               <li key={i}>
@@ -177,21 +200,30 @@ function App() {
             ))}
           </ul>
         </CVSection>
-        <CVSection title={<><i className="fas fa-briefcase icon" />Professional Experience</>}>
+        <CVSection id="experience" 
+            title={<><i className="fas fa-briefcase icon" />Experience</>}
+            isOpen={openSection === 'experience'}
+            onToggle={handleSectionClick}>
           <ul>
             {experience.map((exp, i) => (
               <ExperienceItem key={i} exp={exp} />
             ))}
           </ul>
         </CVSection>
-        <CVSection title={<><i className="fas fa-diagram-project icon" />Projects and Works</>}>
+        <CVSection id="projects" 
+            title={<><i className="fas fa-diagram-project icon" />Projects and Works</>}
+            isOpen={openSection === 'projects'}
+            onToggle={handleSectionClick}>
           <ul>
             {projects.map((p, i) => (
               <ProjectItem key={i} project={p} />
             ))}
           </ul>
         </CVSection>
-        <CVSection title={<><i className="fas fa-code icon" />Skills</>}>
+        <CVSection id="skills" 
+            title={<><i className="fas fa-code icon" />Skills</>}
+            isOpen={openSection === 'skills'}
+            onToggle={handleSectionClick}>
           <ul>
             <li><i className="fas fa-terminal icon" /><b>Programming:</b> {skills.programming.join(", ")}</li>
             <li><i className="fas fa-globe icon" /><b>Web:</b> {skills.web.join(", ")}</li>
@@ -199,7 +231,10 @@ function App() {
             <li><i className="fas fa-cubes icon" /><b>Software:</b> {skills.software.join(", ")}</li>
           </ul>
         </CVSection>
-        <CVSection title={<><i className="fas fa-book icon" />Publications</>}>
+        <CVSection id="publications" 
+            title={<><i className="fas fa-book icon" />Publications</>} 
+            isOpen={openSection === 'publications'}
+            onToggle={handleSectionClick} >
           {publications.map((pub, i) => (
             <div key={i}>
               <b>{pub.type}</b>
@@ -229,7 +264,10 @@ function App() {
             </div>
           ))}
         </CVSection>
-        <CVSection title={<><i className="fas fa-chalkboard-teacher icon" />Conferences</>}>
+        <CVSection id="conferences" 
+            title={<><i className="fas fa-chalkboard-teacher icon" />Conferences</>} 
+            isOpen={openSection === 'conferences'}
+            onToggle={handleSectionClick}>
           <ul>
             {conferences.map((c, i) => (
               <li key={i}>
@@ -244,17 +282,26 @@ function App() {
             ))}
           </ul>
         </CVSection>
-        <CVSection title={<><i className="fas fa-language icon" />Languages</>}>
+        <CVSection id="languages" 
+            title={<><i className="fas fa-language icon" />Languages</>} 
+            isOpen={openSection === 'languages'}
+            onToggle={handleSectionClick}>
           <ul>
             {languages.map((l, i) => <li key={i}><i className="fas fa-flag icon" />{l}</li>)}
           </ul>
         </CVSection>
-        <CVSection title={<><i className="fas fa-certificate icon" />Certificates</>}>
+        <CVSection id="certificates" 
+            title={<><i className="fas fa-certificate icon" />Certificates</>} 
+            isOpen={openSection === 'certificates'}
+            onToggle={handleSectionClick}>
           <ul>
             {certificates.map((c, i) => <li key={i}><i className="fas fa-award icon" />{c}</li>)}
           </ul>
         </CVSection>
-        <CVSection title={<><i className="fas fa-ellipsis-h icon" />Other</>}>
+        <CVSection id="other" 
+            title={<><i className="fas fa-ellipsis-h icon" />Other</>} 
+            isOpen={openSection === 'other'}
+            onToggle={handleSectionClick}>
           <ul>
             {other.map((o, i) => <li key={i}><i className="fas fa-star icon" />{o}</li>)}
           </ul>
