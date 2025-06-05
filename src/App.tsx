@@ -21,8 +21,8 @@ function App() {
             <h1>{personal.name}</h1>
             <h3>{personal.title}</h3>
             <div>
-              <div><b>Born:</b> {personal.born}</div>
-              <div><b>Status:</b> {personal.status}</div>
+              {/* <div><b>Born:</b> {personal.born}</div> */}
+              {/* <div><b>Status:</b> {personal.status}</div> */}
               <div><b>Position:</b> {personal.position}</div>
               <div><b>Department:</b> {personal.department}</div>
               <div><b>Institution:</b> {personal.institution}</div>
