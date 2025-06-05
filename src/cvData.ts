@@ -2,9 +2,7 @@ export const cvData = {
   personal: {
     name: "Dr. Rochdi Boudjehem",
     title: "PhD in Computer Science",
-    born: "31 December 1979, Guelma",
-    status: "Married with children (3)",
-    position: "Assistant Professor",
+    position: "Asscociate Professor",
     department: "Computer Science Department",
     institution: "University of 8 Mai 1945 Guelma, Algeria"
   },
