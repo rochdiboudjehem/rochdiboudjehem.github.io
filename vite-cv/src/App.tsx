@@ -26,6 +26,13 @@ function App() {
               <div><b>Position:</b> {personal.position}</div>
               <div><b>Department:</b> {personal.department}</div>
               <div><b>Institution:</b> {personal.institution}</div>
+                <div style={{ marginTop: 8, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <img
+                  src="images/logo-univ-guelma.svg"
+                  alt="University of Guelma Logo"
+                  style={{ height: 80, display: 'block' }}
+                />
+                </div>
             </div>
           </div>
         </div>
