@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import "./styles/main.css";
 import "./styles/icons.css";
 import { cvData } from "./cvData";
