@@ -1,5 +1,5 @@
-import { a } from "framer-motion/client";
-import { FaC } from "react-icons/fa6";
+// import { a } from "framer-motion/client";
+// import { FaC } from "react-icons/fa6";
 
 export const cvData = {
   personal: {
@@ -103,10 +103,28 @@ export const cvData = {
       place: "ODEJ of Guelma",
       placeDetails: "Office Des Etablissments de Jeunesse de Guelma",
       details: [
-        "Supervision on Computer Science Personnel",
-        "Hardware and Software Supervision",
-        "Development and maintenance of many computer applications",
-        "Functional analysis & Technical design"
+        "Supervise computer hardware and software",
+        "Maintain IT systems",
+        "Develop internal applications",
+        "Deploy and maintain applications",
+        "Support staff on IT systems",
+        "Train staff on software usage",
+        "Ensure network security",
+        "Perform regular backups",
+        "Manage user access rights",
+        "Analyze requirements for IT projects",
+        "Document technical requirements",
+        "Coordinate with external vendors",
+        "Procure IT equipment",
+        "Maintain IT equipment",
+        "Monitor network infrastructure",
+        "Troubleshoot servers, routers, switches",
+        "Implement IT policies",
+        "Enforce IT best practices",
+        "Prepare technical reports",
+        "Document for audits and compliance",
+        "Stay updated with technologies",
+        "Recommend IT improvements"
       ]
     },
     {
@@ -117,7 +135,9 @@ export const cvData = {
       details: [
         "Member of the team: Web Technologies and Intelligent Systems",
         "Working on Project: Predicting Learning Difficulties in Human Learning Environments",
-        "Published several scientific papers indexed in WebOfScience, Scopus, ERIH Plus and others"
+        "Published several scientific papers indexed in WebOfScience, Scopus, ERIH Plus and others",
+        "Active participation as organization committee member in LabSTIC-organized conferences and events",
+        "Served as scientific committee member and head of session in several LabSTIC conferences and workshops"
       ]
     },
     {
@@ -361,47 +381,85 @@ export const cvData = {
   ],
   conferences: [
     {
+      year: "2024",
+      title: "",
+      event: "The 7th International Hybrid Conference on Informatics and Applied Mathematics IAM'23",
+      participation: [
+        "Scientific committee member",
+      ]
+    },
+    {
       year: "2023",
       title: "Intelligent E-tutoring System to Help New-Coming Students",
-      event: "The 6th International Hybrid Conference on Informatics and Applied Mathematics IAM'23"
+      event: "The 6th International Hybrid Conference on Informatics and Applied Mathematics IAM'23",
+      participation: [
+        "Speaker",
+        "Scientific committee member",
+      ]
     },
     {
       year: "2023",
       title: "A New Learner Model to Predict 'Slow Learners' Using Machine Learning",
       event: "NCNETI23: The 1st National Conference on New Educational Technologies and Informatics",
-      link: "https://ncneti23.github.io/assets/pdf/NCNETI23%20Proceedings%20Final%20%20.pdf"
+      link: "https://ncneti23.github.io/assets/pdf/NCNETI23%20Proceedings%20Final%20%20.pdf",
+      participation: [
+        "Speaker",
+        "Organization committee member",
+        "Scientific committee member",
+        "Head of session"
+      ]
     },
     {
       year: "2022",
       title: "A study on the factors affecting the quality of learning content in the context of e-learning",
-      event: "MOAD'2022: Colloque International: Méthodes et Outils d'Aide à la Décision"
+      event: "MOAD'2022: Colloque International: Méthodes et Outils d'Aide à la Décision",
+      participation: [
+        "Scientific committee member"
+      ]
     },
     {
       year: "2022",
       title: "Using Machine Learning Techniques to Detect Learners with Learning Difficulties",
-      event: "IAM22: 5th Conference on Informatics and Applied Mathematics"
+      event: "IAM22: 5th Conference on Informatics and Applied Mathematics",
+      participation: [
+        "Speaker",
+      ]
     },
     {
       year: "2020",
       title: "Study of the impact of collaboration among learners during the learning of Object-Oriented Programming",
       event: "8th International Conference on Future Learning and Informatics: Data Revolution",
-      link: "https://fl2022.istanbul.edu.tr/en"
+      link: "https://fl2022.istanbul.edu.tr/en",
+      participation: [
+        "Speaker",
+      ]
     },
     {
       year: "2019",
       title: "LISP(P): A new pedagogical approach for learning mathematics in Colleges",
       event: "The 1st International Conference on Innovative Trends in Computer Science (CITCS'2019)",
-      link: "https://easychair.org/publications/preprint_download/hCTG"
+      link: "https://easychair.org/publications/preprint_download/hCTG",
+      participation: [
+        "Speaker",
+        "Ogranization committee member"
+      ]
     },
     {
       year: "2019",
       title: "A decision support system to assist course design teachers",
-      event: "IAM19: 2nd Conference on Informatics and Applied Mathematics"
+      event: "IAM19: 2nd Conference on Informatics and Applied Mathematics",
+      participation: [
+        "Speaker",
+        "Organization committee member"
+      ]
     },
     {
       year: "2018",
       title: "Agent-based solutions in distance education",
-      event: "IAM'18: Doctoral Days on Informatics and Applied Mathematics"
+      event: "IAM'18: Doctoral Days on Informatics and Applied Mathematics",
+      participation: [
+        "Speaker"
+      ]
     }
   ],
   languages: [

@@ -1,5 +1,5 @@
-import { Box, Heading, VStack, Link, Text, Icon, Divider } from "@chakra-ui/react";
-import { SiGooglescholar, SiOrcid, SiScopus, SiWebofscience, SiResearchgate, SiAcademia } from "react-icons/si";
+import { Box, Heading, VStack, Link, Text, Icon } from "@chakra-ui/react";
+import { SiGooglescholar, SiOrcid, SiScopus, SiResearchgate, SiAcademia } from "react-icons/si";
 
 const academicAccounts = [
   {

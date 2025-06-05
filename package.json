@@ -28,6 +28,7 @@
     "@mui/material": "^7.1.1",
     "academicons": "^1.9.2",
     "framer-motion": "^12.16.0",
+    "module": "^1.2.5",
     "react-icons": "^5.5.0"
   }
 }

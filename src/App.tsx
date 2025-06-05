@@ -8,7 +8,62 @@ import CVSection from "./components/CVSection";
 import Navbar from "./components/Navbar";
 import ExperienceItem from "./components/ExperienceItem";
 import ProjectItem from "./components/ProjectItem";
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
+import ConferenceItem from "./components/ConferenceItem";
+
+const ScrollToTop = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  return isVisible ? (
+    <button
+      onClick={scrollToTop}
+      style={{
+        position: 'fixed',
+        right: '20px',
+        bottom: '20px',
+        backgroundColor: '#1976d2',
+        color: 'white',
+        width: '40px',
+        height: '40px',
+        borderRadius: '50%',
+        border: 'none',
+        cursor: 'pointer',
+        boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '20px',
+        transition: 'background-color 0.2s',
+        zIndex: 1000
+      }}
+      title="Scroll to top"
+      onMouseOver={e => e.currentTarget.style.backgroundColor = '#1565c0'}
+      onMouseOut={e => e.currentTarget.style.backgroundColor = '#1976d2'}
+    >
+      <i className="fas fa-arrow-up" />
+    </button>
+  ) : null;
+};
 
 function App() {
   const { personal, contacts, academicAccounts, social, education, experience, projects, skills, publications, conferences, languages, certificates, other } = cvData;
@@ -268,19 +323,18 @@ function App() {
             title={<><i className="fas fa-chalkboard-teacher icon" />Conferences</>} 
             isOpen={openSection === 'conferences'}
             onToggle={handleSectionClick}>
-          <ul>
-            {conferences.map((c, i) => (
-              <li key={i}>
-                <i className="fas fa-microphone icon" />
-                {c.year}. {c.title}. 
-                {c.link ? (
-                  <a href={c.link} target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'underline', fontStyle: 'italic' }}>{c.event}</a>
-                ) : (
-                  <span style={{ fontStyle: 'italic' }}>{c.event}</span>
-                )}
-              </li>
-            ))}
-          </ul>
+                <ul>
+                  {conferences.map((c, i) => (
+                    <ConferenceItem
+                      key={i}
+                      year={c.year}
+                      title={c.title}
+                      event={c.event}
+                      link={c.link}
+                      participation={c.participation}
+                    />
+                  ))}
+                </ul>
         </CVSection>
         <CVSection id="languages" 
             title={<><i className="fas fa-language icon" />Languages</>} 
@@ -307,6 +361,7 @@ function App() {
           </ul>
         </CVSection>
       </div>
+          <ScrollToTop />
     </>
   );
 }
