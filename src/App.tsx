@@ -1,6 +1,7 @@
-// import React from "react";
+// import React from "react};
 import "./styles/main.css";
 import "./styles/icons.css";
+import 'academicons/css/academicons.min.css';
 import { cvData } from "./cvData";
 import PhotoPlaceholder from "./components/PhotoPlaceholder";
 import CVSection from "./components/CVSection";
@@ -9,12 +10,14 @@ import ExperienceItem from "./components/ExperienceItem";
 import ProjectItem from "./components/ProjectItem";
 
 function App() {
-  const { personal, education, experience, projects, skills, publications, conferences, languages, certificates, other } = cvData;
+  const { personal, contacts, academicAccounts, social, education, experience, projects, skills, publications, conferences, languages, certificates, other } = cvData;
+  
 
   return (
     <>
       <Navbar />
       <div className="cv-container">
+
         <div className="header">
           <PhotoPlaceholder />
           <div>
@@ -26,6 +29,128 @@ function App() {
               <div><b>Position:</b> {personal.position}</div>
               <div><b>Department:</b> {personal.department}</div>
               <div><b>Institution:</b> {personal.institution}</div>
+
+              <div className="contact-section" >
+                {/* <div>
+                  <i className="fas fa-envelope icon" /> <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
+                </div> */}
+                {/* Academic Accounts */}
+                <div style={{ display: 'flex', flexWrap: 'wrap',}}>
+                  {contacts.email && (
+                  <a href={contacts.email} target="_blank" rel="noopener noreferrer" title="Email">
+                    <i className="fas fa-envelope icon" />
+                  </a>
+                  )}
+
+                  {academicAccounts.googleScholar && (
+                  <a href={academicAccounts.googleScholar} target="_blank" rel="noopener noreferrer" title="Google Scholar">
+                    <i className="ai ai-google-scholar icon" />
+                  </a>
+                  )}
+                  {academicAccounts.orcid && (
+                  <a href={academicAccounts.orcid} target="_blank" rel="noopener noreferrer" title="ORCID">
+                    <i className="ai ai-orcid icon" />
+                  </a>
+                  )}
+                  {academicAccounts.scopus && (
+                  <a href={academicAccounts.scopus} target="_blank" rel="noopener noreferrer" title="Scopus">
+                    <i className="ai ai-scopus icon" />
+                  </a>
+                  )}
+                  {academicAccounts.webOfScience && (
+                  <a href={academicAccounts.webOfScience} target="_blank" rel="noopener noreferrer" title="Web of Science">
+                    <i className="ai ai-webofscience icon" />
+                  </a>
+                  )}
+                  {academicAccounts.researchGate && (
+                  <a href={academicAccounts.researchGate} target="_blank" rel="noopener noreferrer" title="ResearchGate">
+                    <i className="ai ai-researchgate icon" />
+                  </a>
+                  )}
+                  {academicAccounts.semanticScholar && (
+                  <a href={academicAccounts.semanticScholar} target="_blank" rel="noopener noreferrer" title="Semantic Scholar">
+                    <i className="ai ai-semantic-scholar icon" />
+                  </a>
+                  )}
+                                    {academicAccounts.academia && (
+                  <a href={academicAccounts.academia} target="_blank" rel="noopener noreferrer" title="Academia.edu">
+                    <i className="ai ai-academia icon" />
+                  </a>
+                  )}
+                </div>
+                {/* Social Accounts */}
+                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 4 }}>
+                  {social.linkedin && (
+                  <a href={social.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <i className="fab fa-linkedin icon" />
+                  </a>
+                  )}
+                  {social.github && (
+                  <a href={social.github} target="_blank" rel="noopener noreferrer" title="GitHub">
+                    <i className="fab fa-github icon" />
+                  </a>
+                  )}
+                  {social.twitter && (
+                  <a href={social.twitter} target="_blank" rel="noopener noreferrer" title="Twitter">
+                    <i className="fab fa-twitter icon" />
+                  </a>
+                  )}
+                  {social.instagram && (
+                  <a href={social.instagram} target="_blank" rel="noopener noreferrer" title="Instagram">
+                    <i className="fab fa-instagram icon" />
+                  </a>
+                  )}
+                  {social.facebook && (
+                  <a href={social.facebook} target="_blank" rel="noopener noreferrer" title="Facebook">
+                    <i className="fab fa-facebook icon" />
+                  </a>
+                  )}
+                  {social.youtube && (
+                  <a href={social.youtube} target="_blank" rel="noopener noreferrer" title="YouTube">
+                    <i className="fab fa-youtube icon" />
+                  </a>
+                  )}
+                  {social.tiktok && (
+                  <a href={social.tiktok} target="_blank" rel="noopener noreferrer" title="TikTok">
+                    <i className="fab fa-tiktok icon" />
+                  </a>
+                  )}
+                  {social.telegram && (
+                  <a href={social.telegram} target="_blank" rel="noopener noreferrer" title="Telegram">
+                    <i className="fab fa-telegram icon" />
+                  </a>
+                  )}
+                  {social.whatsapp && (
+                  <a href={social.whatsapp} target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                    <i className="fab fa-whatsapp icon" />
+                  </a>
+                  )}
+                  {social.discord && (
+                  <a href={social.discord} target="_blank" rel="noopener noreferrer" title="Discord">
+                    <i className="fab fa-discord icon" />
+                  </a>
+                  )}
+                  {social.reddit && (
+                  <a href={social.reddit} target="_blank" rel="noopener noreferrer" title="Reddit">
+                    <i className="fab fa-reddit icon" />
+                  </a>
+                  )}
+                </div>
+                <div>
+                  <i className="fas fa-phone icon" /> {contacts.phone}
+                  &nbsp; | &nbsp;&nbsp;<i className="fas fa-map-marker-alt icon" /> {contacts.address}
+                </div>
+
+
+
+              </div>
+                            {/* <div style={{ marginTop: 0, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <img 
+                src="../images/logo-univ-guelma Full Text Dark.svg"
+                alt="University of Guelma Logo"
+                style={{ height: 80, display: 'block' }}
+                />  
+        </div> */}
             </div>
           </div>
         </div>
