@@ -1,3 +1,6 @@
+import { a } from "framer-motion/client";
+import { FaC } from "react-icons/fa6";
+
 export const cvData = {
   personal: {
     name: "Dr. Rochdi Boudjehem",
@@ -8,6 +11,36 @@ export const cvData = {
     department: "Computer Science Department",
     institution: "University of 8 Mai 1945 Guelma, Algeria"
   },
+  contacts: {
+    email: "rochdi.boudjehem@univ-guelma.dz",
+    phone: "+213 669178674",
+    address: "Guelma, Algeria",
+    website: "https://rochdi-boudjehem.github.io",
+  },
+  academicAccounts: {
+    academia: "https://guelma.academia.edu/RochdiBoudjehem",
+    googleScholar: "https://scholar.google.com/citations?user=CXoCLWIAAAAJ&hl=en",
+    orcid: "https://orcid.org/0000-0002-9998-4833",
+    scopus: "http://scopus.com/authid/detail.uri?authorId=57468903100",
+    webOfScience: "https://www.webofscience.com/wos/author/record/ABC-4157-2021",
+    researchGate: "https://www.researchgate.net/profile/Rochdi-Boudjehem",
+    semanticScholar: "https://www.semanticscholar.org/author/Rochdi-Boudjehem/1234567890",
+  },
+  social: {
+    linkedin: "https://www.linkedin.com/in/rochdi-boudjehem-8b0a1b1a/",
+    github: "https://github.com/rochdiboudjehem",
+    twitter: "https://twitter.com/RochdiBoudjehem",
+    instagram: "https://www.instagram.com/dr.rochdi.boudjehem/",
+    facebook: "https://www.facebook.com/dr.rochdi.boudjehem",
+    youtube: "https://www.youtube.com/@rochdiboudjehem",
+    tiktok: "https://www.tiktok.com/@rochdi.333",
+    telegram: "https://t.me/rochdiboudjehem",
+    whatsapp: "https://wa.me/213669178674",
+    discord: "https://discord.gg/rochdiboudjehem",
+    reddit: "https://www.reddit.com/user/Party-Picture3943/",
+    
+  },
+ 
   education: [
     {
       degree: "PhD in Computer Science",
