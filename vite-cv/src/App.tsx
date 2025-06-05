@@ -8,7 +8,7 @@ import CVSection from "./components/CVSection";
 import Navbar from "./components/Navbar";
 import ExperienceItem from "./components/ExperienceItem";
 import ProjectItem from "./components/ProjectItem";
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ConferenceItem from "./components/ConferenceItem";
 
 const ScrollToTop = () => {

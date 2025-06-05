@@ -1,5 +1,5 @@
-import { a } from "framer-motion/client";
-import { FaC } from "react-icons/fa6";
+// import { a } from "framer-motion/client";
+// import { FaC } from "react-icons/fa6";
 
 export const cvData = {
   personal: {
