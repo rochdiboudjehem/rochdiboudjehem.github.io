@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import ExperienceItem from "./components/ExperienceItem";
 import ProjectItem from "./components/ProjectItem";
 import React, { useState, useEffect } from 'react';
+import ConferenceItem from "./components/ConferenceItem";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -322,19 +323,18 @@ function App() {
             title={<><i className="fas fa-chalkboard-teacher icon" />Conferences</>} 
             isOpen={openSection === 'conferences'}
             onToggle={handleSectionClick}>
-          <ul>
-            {conferences.map((c, i) => (
-              <li key={i}>
-                <i className="fas fa-microphone icon" />
-                {c.year}. {c.title}. 
-                {c.link ? (
-                  <a href={c.link} target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'underline', fontStyle: 'italic' }}>{c.event}</a>
-                ) : (
-                  <span style={{ fontStyle: 'italic' }}>{c.event}</span>
-                )}
-              </li>
-            ))}
-          </ul>
+                <ul>
+                  {conferences.map((c, i) => (
+                    <ConferenceItem
+                      key={i}
+                      year={c.year}
+                      title={c.title}
+                      event={c.event}
+                      link={c.link}
+                      participation={c.participation}
+                    />
+                  ))}
+                </ul>
         </CVSection>
         <CVSection id="languages" 
             title={<><i className="fas fa-language icon" />Languages</>} 
