@@ -14,7 +14,7 @@ const ConferenceItem: React.FC<ConferenceItemProps> = ({ year, title, event, lin
   return (
     <li style={{ marginBottom: '12px' }}>
       <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-        <i className="fas fa-microphone icon" />
+        <i className="fas fa-chalkboard-teacher icon" />
         <div style={{ flex: 1 }}>
           {year}. {title}.{' '}
           {link ? (
