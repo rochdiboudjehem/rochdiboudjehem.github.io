@@ -26,7 +26,7 @@ export const cvData = {
     researchGate: "https://www.researchgate.net/profile/Rochdi-Boudjehem",
     semanticScholar: "https://www.semanticscholar.org/author/Rochdi-Boudjehem/1234567890",
     academia: "https://guelma.academia.edu/RochdiBoudjehem",
-    dblp:"https://dblp.com"
+    dblp:"https://dblp.org/pid/313/5053.html"
   },
   social: {
     linkedin: "https://www.linkedin.com/in/rochdi-boudjehem-8b0a1b1a/",
