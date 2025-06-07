@@ -105,8 +105,15 @@ function App() {
               <div><b>Department:</b> {personal.department}</div>
               <div><b>Institution:</b> {personal.institution}</div>
               <div>
-                <i className="fas fa-phone icon" /> {contacts.phone}
-                &nbsp; | &nbsp;&nbsp;<i className="fas fa-map-marker-alt icon" /> {contacts.address}
+
+
+                {contacts.email && (
+                  <a href={contacts.email} target="_blank" rel="noopener noreferrer" title="Email">
+                    <i className="fas fa-envelope icon"></i>
+                    <span>boudjehem.rochdi@univ-guelma.dz</span>
+                  </a>
+                )}
+
               </div>
               <hr style={{ margin: '3px 0', border: 0, borderTop: '1px solid #ccc' }} />
               <div className="contact-section" >
@@ -115,18 +122,28 @@ function App() {
                 </div> */}
                 {/* Academic Accounts */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', }}>
-                                    
+                {social.telegram && (
+                  <a href={social.telegram} target="_blank" rel="noopener noreferrer" title="Telegram">
+                    <i className="fab fa-telegram icon" />
+                  </a>
+                )}
+                {social.whatsapp && (
+                  <a href={social.whatsapp} target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                    <i className="fab fa-whatsapp icon" />
+                  </a>
+                )}
+                  <i className="fas fa-phone icon" /> {contacts.phone}
+                  &nbsp; | &nbsp;&nbsp;
+                  {/* <i className="fas fa-map-marker-alt icon" />                    */}
                   {contacts.email && (
                     <a href={contacts.gmail} target="_blank" rel="noopener noreferrer" title="Gmail" >
-                      <i style={{ color: 'red'}} className="far fa-envelope icon" />
+                      <i style={{ color: 'red' }} className="far fa-envelope icon"></i>
+                      <span>rochdiboudjehem@gmail.com</span>
                     </a>
                   )}
-
-                  {contacts.email && (
-                    <a href={contacts.email} target="_blank" rel="noopener noreferrer" title="Email">
-                      <i className="fas fa-envelope icon" />
-                    </a>
-                  )}
+                </div>
+                <hr style={{ margin: '3px 0', border: 0, borderTop: '1px solid #ccc' }} />
+                <div style={{ display: 'flex', gap: 0, flexWrap: 'wrap', }}>
 
                   {academicAccounts.webOfScience && (
                     <a href={academicAccounts.webOfScience} target="_blank" rel="noopener noreferrer" title="Web of Science">
@@ -172,9 +189,11 @@ function App() {
                     </a>
                   )}
 
+
                 </div>
+                <hr style={{ margin: '3px 0', border: 0, borderTop: '1px solid #ccc' }} />
                 {/* Social Accounts */}
-                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 4 }}>
+                <div style={{ display: 'flex', gap: 0, flexWrap: 'wrap', marginTop: 4 }}>
                   {social.linkedin && (
                     <a href={social.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn">
                       <i className="fab fa-linkedin icon" />
@@ -183,16 +202,6 @@ function App() {
                   {social.github && (
                     <a href={social.github} target="_blank" rel="noopener noreferrer" title="GitHub">
                       <i className="fab fa-github icon" />
-                    </a>
-                  )}
-                  {social.twitter && (
-                    <a href={social.twitter} target="_blank" rel="noopener noreferrer" title="Twitter">
-                      <i className="fab fa-twitter icon" />
-                    </a>
-                  )}
-                  {social.instagram && (
-                    <a href={social.instagram} target="_blank" rel="noopener noreferrer" title="Instagram">
-                      <i className="fab fa-instagram icon" />
                     </a>
                   )}
                   {social.facebook && (
@@ -205,31 +214,32 @@ function App() {
                       <i className="fab fa-youtube icon" />
                     </a>
                   )}
+                  {social.twitter && (
+                    <a href={social.twitter} target="_blank" rel="noopener noreferrer" title="Twitter">
+                      <i className="fab fa-twitter icon" />
+                    </a>
+                  )}
+                  {social.instagram && (
+                    <a href={social.instagram} target="_blank" rel="noopener noreferrer" title="Instagram">
+                      <i className="fab fa-instagram icon" />
+                    </a>
+                  )}
                   {social.tiktok && (
                     <a href={social.tiktok} target="_blank" rel="noopener noreferrer" title="TikTok">
                       <i className="fab fa-tiktok icon" />
                     </a>
                   )}
-                  {social.telegram && (
-                    <a href={social.telegram} target="_blank" rel="noopener noreferrer" title="Telegram">
-                      <i className="fab fa-telegram icon" />
-                    </a>
-                  )}
-                  {social.whatsapp && (
-                    <a href={social.whatsapp} target="_blank" rel="noopener noreferrer" title="WhatsApp">
-                      <i className="fab fa-whatsapp icon" />
-                    </a>
-                  )}
-                  {social.discord && (
+
+                  {/* {social.discord && (
                     <a href={social.discord} target="_blank" rel="noopener noreferrer" title="Discord">
                       <i className="fab fa-discord icon" />
                     </a>
-                  )}
-                  {social.reddit && (
+                  )} */}
+                  {/* {social.reddit && (
                     <a href={social.reddit} target="_blank" rel="noopener noreferrer" title="Reddit">
                       <i className="fab fa-reddit icon" />
                     </a>
-                  )}
+                  )} */}
                 </div>
 
 

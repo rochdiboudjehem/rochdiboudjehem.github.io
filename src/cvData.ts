@@ -20,16 +20,16 @@ export const cvData = {
   },
   academicAccounts: {
     webOfScience: "https://www.webofscience.com/wos/author/record/ABC-4157-2021",
-    googleScholar: "https://scholar.google.com/citations?user=CXoCLWIAAAAJ&hl=en",
-    orcid: "https://orcid.org/0000-0002-9998-4833",
     scopus: "http://scopus.com/authid/detail.uri?authorId=57468903100",
+    orcid: "https://orcid.org/0000-0002-9998-4833",
     researchGate: "https://www.researchgate.net/profile/Rochdi-Boudjehem",
-    semanticScholar: "https://www.semanticscholar.org/author/Rochdi-Boudjehem/1234567890",
-    academia: "https://guelma.academia.edu/RochdiBoudjehem",
-    dblp:"https://dblp.org/pid/313/5053.html"
+    googleScholar: "https://scholar.google.com/citations?user=CXoCLWIAAAAJ&hl=en",
+    semanticScholar: "https://www.semanticscholar.org/author/Rochdi-Boudjehem/2136277524",
+    dblp:"https://dblp.org/pid/313/5053.html",
+    academia: "https://guelma.academia.edu/RochdiBoudjehem"
   },
   social: {
-    linkedin: "https://www.linkedin.com/in/rochdi-boudjehem-8b0a1b1a/",
+    linkedin: "https://www.linkedin.com/in/rochdi-boudjehem-a142a927b/",
     github: "https://github.com/rochdiboudjehem",
     twitter: "https://twitter.com/RochdiBoudjehem",
     instagram: "https://www.instagram.com/dr.rochdi.boudjehem/",
