@@ -11,6 +11,7 @@ import ExperienceItem from "./components/ExperienceItem";
 import ProjectItem from "./components/ProjectItem";
 import { useState, useEffect } from 'react';
 import ConferenceItem from "./components/ConferenceItem";
+import PublicationItem from "./components/PublicationItem";
 import "./styles/css/academicons.min.css";
 
 const ScrollToTop = () => {
@@ -264,12 +265,14 @@ function App() {
           <ul>
             {education.map((e, i) => (
               <li key={i}>
-                <i className="fas fa-certificate icon" />
+                {/* <i className="fas fa-certificate icon" /> */}
+                <i className="fas fa-scroll icon" title="Degree" style={{ color: '#8e44ad' }} />
                 <b>{e.degree}</b> ({e.year})<br />
                 {e.institution}
-                {e.thesis && (
+                {/* IF you want to add the thesis title activate the bellow section */}
+                {/* {e.thesis && (
                   <div style={{ marginTop: 2 }}>
-                    <i className="fas fa-scroll icon" title="Thesis/Dissertation" style={{ color: '#8e44ad' }} />
+                    <i className="fas fa-certificate icon" title="Thesis/Dissertation"/>
                     {e.link ? (
                       <a href={e.link} target="_blank" rel="noopener noreferrer" style={{ marginLeft: 8, color: '#1976d2', textDecoration: 'underline', fontStyle: 'italic' }}>
                         {e.thesis}
@@ -278,7 +281,7 @@ function App() {
                       <span style={{ fontStyle: 'italic', marginLeft: 8 }}>{e.thesis}</span>
                     )}
                   </div>
-                )}
+                )} */}
               </li>
             ))}
           </ul>
@@ -314,39 +317,34 @@ function App() {
             <li><i className="fas fa-cubes icon" /><b>Software:</b> {skills.software.join(", ")}</li>
           </ul>
         </CVSection>
-        <CVSection id="publications"
-          title={<><i className="fas fa-book icon" />Publications</>}
-          isOpen={openSection === 'publications'}
-          onToggle={handleSectionClick} >
-          {publications.map((pub, i) => (
-            <div key={i}>
-              <b>{pub.type}</b>
-              <ul>
-                {pub.items.map((item, j) => (
-                  <li key={j}>
-                    <i className="fas fa-file-alt icon" />
-                    {item.authors} ({item.year}).{' '}
-                    {item.link ? (
-                      <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'underline', fontStyle: 'italic' }}>{item.title}</a>
-                    ) : (
-                      <span style={{ fontStyle: 'italic' }}>{item.title}</span>
-                    )}
-                    . <span style={{ fontStyle: 'italic' }}>{item.journal}</span>
-                    {item.volume && (
-                      <span>, <b>{item.volume}</b></span>
-                    )}
-                    {item.issue && (
-                      <span>({item.issue})</span>
-                    )}
-                    {item.pages && (
-                      <span>, {item.pages}</span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </CVSection>
+<CVSection 
+  id="publications" 
+  title={<><i className="fas fa-book icon" />Publications</>}
+  isOpen={openSection === 'publications'}
+  onToggle={handleSectionClick}
+>
+  {publications.map((pub, i) => (
+    <div key={i}>
+      <b>{pub.type}</b>
+      <ul>
+        {pub.items.map((item, j) => (
+          <PublicationItem
+            key={j}
+            authors={item.authors}
+            year={item.year}
+            title={item.title}
+            journal={item.journal}
+            volume={item.volume}
+            issue={item.issue}
+            pages={item.pages}
+            link={item.link}
+            abstract={Array.isArray(item.abstract) ? item.abstract.join(" ") : item.abstract}
+          />
+        ))}
+      </ul>
+    </div>
+  ))}
+</CVSection>
         <CVSection id="conferences"
           title={<><i className="fas fa-users icon" />Conferences</>}
           isOpen={openSection === 'conferences'}

@@ -37,7 +37,7 @@ const ConferenceItem: React.FC<ConferenceItemProps> = ({ year, title, event, lin
                 marginLeft: '8px'
               }}
             >
-              <i className={`fas fa-chevron-${isExpanded ? 'up' : 'down'}`} />
+              <i style={{ color: 'red' }} className={`fas fa-chevron-${isExpanded ? 'up' : 'down'}`} />
             </button>
           )}
         </div>

@@ -48,21 +48,21 @@ export const cvData = {
       degree: "PhD in Computer Science",
       year: "2022",
       institution: "University of 8 Mai 1945 – Guelma, Algeria",
-      thesis: "An agent-based approach to predict the behaviors of learners with difficulties inside human learning environments",
-      link: "http://dspace.univ-guelma.dz/jspui/handle/123456789/13893"
+      // thesis: "An agent-based approach to predict the behaviors of learners with difficulties inside human learning environments",
+      // link: "http://dspace.univ-guelma.dz/jspui/handle/123456789/13893"
     },
     {
       degree: "Master in Computer Science - Media Engineering",
       year: "2016",
       institution: "University of 8 Mai 1945 – Guelma, Algeria",
-      thesis: "Maîtrise du comportement d'un système Multi-agents adaptatif",
-      link: "http://dspace.univ-guelma.dz:8080/xmlui/bitstream/handle/123456789/5410/boudjehem"
+      // thesis: "Maîtrise du comportement d'un système Multi-agents adaptatif",
+      // link: "http://dspace.univ-guelma.dz:8080/xmlui/bitstream/handle/123456789/5410/boudjehem"
     },
     {
       degree: "Engineer in Computer Science - Hardware and Software",
       year: "2002",
       institution: "University of Badji Mokhtar, Annaba, Algeria",
-      thesis: "Distribution de charge dans un réseau"
+      // thesis: "Distribution de charge dans un réseau"
     },
     {
       degree: "Baccalaureate in Exact Sciences",
@@ -332,10 +332,12 @@ export const cvData = {
           title: "An early warning system to predict dropouts inside e-learning environments.",
           journal: "Education and Information Technologies",
           link: "https://doi.org/10.1007/s10639-024-12498-1",
-            abstract: "This paper presents a novel early warning system designed to predict potential dropouts in e-learning environments. By analyzing learner behaviors and performance metrics, the system aims to identify at-risk students and provide timely interventions to enhance retention rates.",
-            volume: "29",
-            issue: "1",
-            pages: "123-145",
+          volume: "29",
+          issue: "1",
+          pages: "123-145",
+          abstract: [
+            "Teaching Institutions could benefit from Early Warning Systems to identify at-risk students before learning difficulties affect the quality of their acquired knowledge. An Early Warning System can help preemptively identify learners at risk of dropping out by monitoring them and analyzing their traces to promptly react to them so they can continue their learning in the best conditions. This paper presents a novel method for predicting at-risk learners based on their performance-based behavior in e-learning environments. The proposed approach can identify and predict learners with difficulties and intervene autonomously to assist them in overcoming them. A novel algorithm is developed to forecast learners who are prone to struggle or drop out. We experimented in a learning environment at a higher education institution that used the proposed strategy to examine its effectiveness, and the findings supported the proposed approach’s efficacy."
+          ]
 
 
         },
@@ -345,10 +347,12 @@ export const cvData = {
           title: "A new approach for assessing the quality of online courses.",
           journal: "Education and Information Technologies",
           link: "https://doi.org/10.1007/s10639-023-12247-w",
-            abstract: "This study introduces a new framework for evaluating the quality of online courses, focusing on various pedagogical and technical aspects. The proposed approach aims to enhance the overall learning experience by providing a comprehensive assessment tool for educators and course designers.",
-            volume: "28",
-            issue: "4",
-            pages: "456-478"
+          volume: "28",
+          issue: "4",
+          pages: "456-478",
+          abstract: [
+            "In this paper, we present an approach for online course evaluation based on learners’ behaviors during the learning process, where the course creator can monitor the quality status of their online courses based on learners’ learning outcomes and then intervene to improve the success rate. For this purpose, a set of criteria has been developed. These criteria concern learners’ cognitive, affective and academic engagement. The proposed approach was adopted by a system consisting of four parts: a learning management system, a LOG preprocessing manager, a quality assessment manager, and a visualization and intervention manager. A first test was carried out on a sample of 33 students from the Department of Economics at the University of Guelma(Algeria), where the results obtained were very encouraging and promising."
+          ]
         },
         {
           authors: "Boudjehem, R., & Lafifi, Y.",
@@ -356,10 +360,12 @@ export const cvData = {
           title: "A new approach to identify dropout learners based on their performance-based behavior.",
           journal: "JUCS - Journal of Universal Computer Science",
           link: "https://doi.org/10.3897/jucs.74280",
-            abstract: "This paper proposes a novel method for identifying learners at risk of dropping out by analyzing their performance-based behaviors. The approach utilizes machine learning techniques to predict dropout likelihood, enabling timely interventions.",
-            volume: "27",
-            issue: "1",
-            pages: "1-20"
+          volume: "27",
+          issue: "1",
+          pages: "1-20",
+          abstract: [
+            "Distance learning environments are increasingly offering more comfort to both learners and teachers, allowing them to carry out their academic tasks remotely, especially in critical times where it is difficult, or even dangerous, to bring these actors together in one physical place. Nevertheless, These same environments are complaining about the massive dropout numbers among their learners. Therefore, designing new intelligent systems capable of reducing these numbers becomes imperative. This paper proposes a new approach capable of identifying and assisting endangered learners experiencing difficulties by monitoring and analyzing their behavior inside the e-learning environment. By building dynamic models to follow the learners’ current situation, the proposed approach could intervene autonomously to save learners identified as struggling. Relying on distributed artificial intelligence instead of humans to closely monitor learners within distance learning environments can be very effective when identifying struggling learners. Furthermore, targeting these learners with early enough and carefully designed interventions can reduce the number of dropouts."
+          ]
         }
       ]
     },
@@ -372,11 +378,57 @@ export const cvData = {
           title: "LISS'nAP: A Peer-Advising Collaborative Learning Approach for Object-Oriented Programming Learning.",
           journal: "Acta Infologica",
           link: "https://doi.org/10.26650/acin.869786",
-          abstract: "This paper presents a peer-advising collaborative learning approach for teaching object-oriented programming. The proposed method aims to enhance student engagement and improve learning outcomes by fostering collaboration and knowledge sharing among peers.",
-            volume: "9",
-            issue: "1",
-            pages: "1-20"
+          volume: "9",
+          issue: "1",
+          pages: "1-20",
+          abstract: [
+            "Among the existing programming paradigms, two of them are the most familiar and the most used by the majority of programers: procedural programming and object-oriented programming. To teach students programming, most existing curricula, especially academic ones, begin by teaching the basics of procedural programming, before moving on to introduce the concepts of object-oriented programming. Unfortunately, this transition is not always smooth for students, and the concepts of object-oriented programming can be perceived as problematic and confusing for some students who have trouble adjusting to the new programming mode and fail to find a decent object-oriented model for a given problem. Some scientists believe that the problem lies in the transition of vision when modeling problems from one vision that is familiar to students to a new one that is object-oriented. Some scientists think that the problem lies in the transition itself when modeling problems from a familiar vision to a new object-oriented one. Other scientists claim that the problem may not reside in the object-oriented paradigm itself, but rather in the existing tools available to teach it, such as the languages and the environments. In this article, we propose a new collaborative learning method for learning object-oriented programming, which can be also used to teach any other course that shares a similar pedagogical structure."
+          ]
 
+        }
+      ]
+    },
+    {
+      type: "Theses",
+      items: [
+        {
+          authors: "Boudjehem, R.",
+          year: "2022",
+          title: "An agent-based approach to predict the behaviors of learners with difficulties inside human learning environments",
+          journal: "[Doctoral dissertation, University of 8 Mai 1945 Guelma, Algeria]",
+          link: "https://dspace.univ-guelma.dz/jspui/handle/123456789/13893",
+          volume: "",
+          issue: "",
+          pages: "",
+          abstract: [
+            "During their learning process, learners may encounter learning difficulties that may affect the quality of their academic outcomes. These difficulties could be triggered by external factors such as inadequate teaching content or internal factors closely related to some learners' specific characteristics. However, rather than looking for flaws in learners, it is more effective to explore extrinsic factors such as the form and relevance of teaching pedagogical content that is more adaptable to change and improvement than learner-specific factors. Struggling learners need different forms of support to learn more effectively and, if possible, catch up with their ordinary peers in terms of academic success. Nevertheless, it is essential to identify learners with difficulties at early stages to benefit from the appropriate support. However, before that, it is imperative to determine the signs and indicators to identify these learners in the face-to-face learning context in general and in e-learning environments in particular. This research is situated in this context and focuses on the learning difficulties faced by learners when using distance learning systems, as well as the intelligent tools available to help them overcome these difficulties. The use of distributed artificial intelligence techniques and, in particular, intelligent agents can solve the problem of detecting learners' learning difficulties and offer them the appropriate support at the right time. In recent years, new intelligent tools adopting new learning theories are continually being integrated into modern learning systems through predictive modeling used as Early Warning Systems (EWS), where one can identify and predict learners at risk in a given learning unit and inform both the teacher and the learners concerned. By collecting and analyzing learners' behavior through the traces left by them and using Distributed Artificial Intelligence (DMI) algorithms such as Multi-Agent Systems (MAS), it is possible to model, track, and monitor separately the current or even future behavior of each learner and identify which of them are doing well and which will face the likely difficulties providing valuable time to intervene and help these learners. Learners. To achieve these goals, a set of cognitive agents have been designed and implemented to detect learners' difficulties on the one hand and predict learners' failure or success on the other hand based on their behaviors. Prototypes validating the ideas proposed in this research work were developed and tested under real learning conditions. The results obtained are considered very promising and very encouraging."
+          ]
+        },
+                {
+          authors: "Boudjehem, R. & Halimi H.",
+          year: "2016",
+          title: "Behavior control of an adaptive multi-agent system (Maîtrise du comportement d'un Système Multi-agents adaptatif)",
+          journal: "[Master's thesis, University of 8 Mai 1945 Guelma, Algeria]",
+          link: "https://dspace.univ-guelma.dz/jspui/handle/123456789/5410",
+          volume: "",
+          issue: "",
+          pages: "",
+          abstract: [
+            "Image segmentation is an essential step in image processing. The contour segmentation approach consists of locating the boundaries of regions. In contrast, region-based segmentation approaches partition the image into a set of regions where each region designates one or more related objects. In practice, the best segmentation results are obtained by combining distinct methods. By doing so, we obtain more robust and more efficient hybrid approaches, as the limitation of one method can be overcome by another, or its strength can be enhanced. In this work, a new hybrid approach to color image segmentation is proposed. It is an adaptive approach based on region-contour cooperation within a multi-agent system. Segmentation proceeds by elaborating a set of initial regions and contours mutually improved, thus providing both a global and a local vision to the segmentation process. The design of such a system is complicated, and the link between the collective and the individual's behavior that makes up the system is difficult to establish. We defend the principle of mastering the behavior of a multi-agent system by a control approach; for that, we act on it from information relative to its global behaviors."
+          ]
+        },
+                {
+          authors: "Boudjehem, R. & Bendjedid B.",
+          year: "2002",
+          title: "Distribution de charge dans un réseau",
+          journal: "[Engineer's thesis, University of Badji Mokhtar, Annaba, Algeria]",
+          volume: "",
+          issue: "",
+          pages: "",
+          // link: "http://dspace.univ-guelma.dz:8080/xmlui/bitstream/handle/123456789/5410/boudjehem",
+          abstract: [
+            ""
+          ]
         }
       ]
     }
