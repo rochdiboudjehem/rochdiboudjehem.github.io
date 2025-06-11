@@ -16,7 +16,7 @@ export const cvData = {
     gmail: "mailto:rochdiboudjehem@gmail.com",
     phone: "+213 669178674",
     address: "Guelma, Algeria",
-    website: "https://rochdi-boudjehem.github.io",
+    website: "https://staff.univ-guelma.dz/rochdi-boudjehem",
   },
   academicAccounts: {
     webOfScience: "https://www.webofscience.com/wos/author/record/ABC-4157-2021",

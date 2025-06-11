@@ -11,12 +11,16 @@ body {
 }
 
 .cv-container {
-  max-width: 900px;
-  margin: 40px auto;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  padding: 32px 24px;
+    max-width: 900px;
+    margin: 0px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 6px -4px 15px 14px #0000ab14;
+    padding: 24px;
+
+    padding: 5px 24px;
+    border-radius: 15px;
+    margin-top: 18px; /* Add top padding to account for fixed navbar and section menu */
 }
 
 .header {
@@ -95,7 +99,7 @@ h2 {
   text-align: center;
   font-size: 1.1rem;
   letter-spacing: 1px;
-  margin-bottom: 32px;
+  margin-bottom: 4px;
 }
 
 .place-with-hover {
@@ -121,4 +125,120 @@ h2 {
 }
 .place-with-hover:hover .place-details-tooltip {
   display: block;
+}
+
+.section-menu-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.section-button {
+  min-width: 80px !important;
+  width: 80px !important;
+  height: 80px !important;
+  font-size: 13px !important;
+  padding: 0 !important;
+  border-radius: 8px !important;
+  display: inline-flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  white-space: normal;
+  margin: 0 4px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  text-align: center;
+  border: 3px solid #1976d2 !important;
+  background: #fff !important;
+  color: #1976d2 !important;
+  text-decoration: none;
+}
+
+.section-button-label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: inherit;
+}
+
+.section-button-icon {
+  font-size: 16px;
+  color: inherit;
+}
+
+/* Unique icon colors for each section button by order */
+.section-button:nth-child(1) .section-button-icon { color: #1976d2; } /* Education - blue */
+.section-button:nth-child(2) .section-button-icon { color: #388e3c; } /* Experience - green */
+.section-button:nth-child(3) .section-button-icon { color: #fbc02d; } /* Projects - yellow */
+.section-button:nth-child(4) .section-button-icon { color: #e64a19; } /* Skills - orange */
+.section-button:nth-child(5) .section-button-icon { color: #8e24aa; } /* Publications - purple */
+.section-button:nth-child(6) .section-button-icon { color: #0097a7; } /* Conferences - teal */
+.section-button:nth-child(7) .section-button-icon { color: #c62828; } /* Languages - red */
+.section-button:nth-child(8) .section-button-icon { color: #6d4c41; } /* Certificates - brown */
+.section-button:nth-child(9) .section-button-icon { color: #455a64; } /* Other - blue-grey */
+
+/* On hover/active, icon becomes white as before */
+.section-button-active .section-button-icon,
+.section-button:hover .section-button-icon {
+  color: #fff !important;
+}
+
+.section-button-active,
+.section-button:hover {
+  background-color: #1976d2 !important;
+  color: #fff !important;
+  border-color: #1565c0 !important;
+}
+
+.section-button-active .section-button-label,
+.section-button:hover .section-button-label,
+.section-button-active .section-button-icon,
+.section-button:hover .section-button-icon {
+  color: #fff !important;
+}
+
+.section-menu-bar {
+  position: sticky;
+  top: 0;
+  z-index: 110;
+  background: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.section-scroll-buffer {
+  min-height: 350px;
+  padding-bottom: 120px;
+}
+
+/* Section header icon colors by section order */
+.cv-section:nth-of-type(2) .section-header .icon { color: #1976d2; }
+.cv-section:nth-of-type(3) .section-header .icon { color: #388e3c; }
+.cv-section:nth-of-type(4) .section-header .icon { color: #fbc02d; }
+.cv-section:nth-of-type(5) .section-header .icon { color: #e64a19; }
+.cv-section:nth-of-type(6) .section-header .icon { color: #8e24aa; }
+.cv-section:nth-of-type(7) .section-header .icon { color: #0097a7; }
+.cv-section:nth-of-type(8) .section-header .icon { color: #c62828; }
+.cv-section:nth-of-type(9) .section-header .icon { color: #6d4c41; }
+.cv-section:nth-of-type(10) .section-header .icon { color: #455a64; }
+
+/* Sub-level icon colors by depth (not by order) */
+.cv-section ul > li > i { color: #1976d2; } /* Depth 1: blue */
+.cv-section ul > li > ul > li > i { color: #388e3c; } /* Depth 2: green */
+.cv-section ul > li > ul > li > ul > li > i { color: #fbc02d; } /* Depth 3: yellow */
+.cv-section ul > li > ul > li > ul > li > ul > li > i { color: #e64a19; } /* Depth 4: orange */
+
+/* If you want to go deeper, add more rules with new colors. */
+
+@media (max-width: 768px) {
+  .section-button {
+    width: 56px !important;
+    height: 56px !important;
+    font-size: 10px !important;
+  }
+  .section-button-icon {
+    font-size: 14px !important;
+  }
 }
