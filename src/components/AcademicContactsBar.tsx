@@ -43,24 +43,15 @@ const academicAccounts = [
   },
 ];
 
-const AcademicContactsBar: React.FC = () => (
-  <div style={{
-    position: 'fixed',
-    left: '20px',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '10px',
-    background: 'linear-gradient(135deg, #e3f2fd 60%, #bbdefb 100%)',
-    padding: '10px 8px',
-    borderRadius: '14px',
-    boxShadow: '0 4px 18px 0 rgba(25, 118, 210, 0.10)',
-    zIndex: 1000,
-    border: '2px solid #1976d2',
-    minWidth: '38px',
-    alignItems: 'center',
-  }}>
+const AcademicContactsBar: React.FC<{ mode?: 'row' }> = ({ mode }) => (
+  <div
+    className={
+      mode === 'row'
+        ? 'd-flex flex-row gap-3 ml-3 pl-5 p-0 align-items-center justify-content-center w-100'
+        : 'position-fixed start-10 top-50 translate-middle-y d-flex flex-column gap-2 bg-light mt-2 p-2 rounded shadow border border-primary min-vw-38 align-items-top'
+    }
+    style={mode === 'row' ? { zIndex: 1 } : { zIndex: 1 }}
+  >
     {academicAccounts.map(acc => (
       <a
         key={acc.label}
@@ -68,20 +59,10 @@ const AcademicContactsBar: React.FC = () => (
         target="_blank"
         rel="noopener noreferrer"
         title={acc.label}
-        style={{
-          color: '#1976d2',
-          fontSize: '18px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '6px',
-          textDecoration: 'none',
-          transition: 'color 0.2s',
-          padding: '4px 0',
-        }}
-        onMouseOver={e => (e.currentTarget.style.color = '#1565c0')}
-        onMouseOut={e => (e.currentTarget.style.color = '#1976d2')}
+        className="text-primary fs-5 d-flex align-items-center gap-1 text-decoration-none py-1"
+        style={{ transition: 'color 0.2s' }}
       >
-        <i className={acc.iconClass + ' icon'} style={{ fontSize: '18px' }} />
+        <i className={acc.iconClass + ' icon'} />
       </a>
     ))}
   </div>
