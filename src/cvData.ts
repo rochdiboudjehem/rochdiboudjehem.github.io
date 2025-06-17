@@ -13,7 +13,7 @@ export const cvData = {
   },
   contacts: {
     email: "rochdi.boudjehem@univ-guelma.dz",
-    gmail: "mailto:rochdiboudjehem@gmail.com",
+    gmail: "rochdiboudjehem@gmail.com",
     phone: "+213 669178674",
     address: "Guelma, Algeria",
     website: "https://staff.univ-guelma.dz/rochdi-boudjehem",
@@ -40,9 +40,9 @@ export const cvData = {
     whatsapp: "https://wa.me/213669178674",
     discord: "https://discord.gg/rochdiboudjehem",
     reddit: "https://www.reddit.com/user/Party-Picture3943/",
-    
+
   },
- 
+
   education: [
     {
       degree: "PhD in Computer Science",
@@ -70,244 +70,286 @@ export const cvData = {
       institution: "Adjabi High School, Guelma, Algeria"
     }
   ],
-  experience: [
-    {
-      period: "2024-Present",
-      title: "Assistant Professor",
-      placeDetails: "University of 8 May 1945 Guelma, Algeria"
-    },
-    {
-      period: "2003-2024 (21 years 4 months)",
-      title: "Part-time University Lecturer",
-      place: "University of Guelma",
-      placeDetails: "University of 8 May 1945 Guelma, Algeria",
-      details: [
-        "Object Oriented Programming (Java)",
-        "Logic and Foundations of Computer Science",
-        "Web Design (PHP)",
-        "Office & Web Technology",
-        "Machine Architecture",
-        "Information Systems",
-        "Algorithmic (Pascal)",
-        "Mathematical Programming Tool",
-        "Algorithms And Data Structures (1, 2 and 3)",
-        "Scientific Research Methodologies",
-        "Language Theory and Compilation",
-        "Distributed Information Systems",
-        "Distributed Algorithms and Data Structures",
-        "Operating Systems (1 and 2)",
-        "Databases"
-      ]
-    },
-    {
-      period: "2008-2024 (15 years 5 months)",
-      title: "Head Engineer in Computer Science",
-      place: "ODEJ of Guelma",
-      placeDetails: "Office Des Etablissments de Jeunesse de Guelma",
-      details: [
-        "Supervise computer hardware and software",
-        "Maintain IT systems",
-        "Develop internal applications",
-        "Deploy and maintain applications",
-        "Support staff on IT systems",
-        "Train staff on software usage",
-        "Ensure network security",
-        "Perform regular backups",
-        "Manage user access rights",
-        "Analyze requirements for IT projects",
-        "Document technical requirements",
-        "Coordinate with external vendors",
-        "Procure IT equipment",
-        "Maintain IT equipment",
-        "Monitor network infrastructure",
-        "Troubleshoot servers, routers, switches",
-        "Implement IT policies",
-        "Enforce IT best practices",
-        "Prepare technical reports",
-        "Document for audits and compliance",
-        "Stay updated with technologies",
-        "Recommend IT improvements"
-      ]
-    },
-    {
-      period: "2017-Present",
-      title: "Researcher",
-      place: "LabSTIC Laboratory",
-      placeDetails: "University of 8 May 1945 Guelma, Algeria",
-      details: [
-        "Member of the team: Web Technologies and Intelligent Systems",
-        "Working on Project: Predicting Learning Difficulties in Human Learning Environments",
-        "Published several scientific papers indexed in WebOfScience, Scopus, ERIH Plus and others",
-        "Active participation as organization committee member in LabSTIC-organized conferences and events",
-        "Served as scientific committee member and head of session in several LabSTIC conferences and workshops"
-      ]
-    },
-    {
-      period: "2007-2008 (1 Year)",
-      title: "Lecturer in Computer Science",
-      place: "Naftogaz, SONATRACH",
-      placeDetails: "SONATRACH, Hassi Messaoud, Algeria",
-      details: [
-        "Windows Server and Network Administration (Installation, Configuration)",
-        "MS Active Directory and ISA Server (Installation, Configuration, and Usage)",
-        "Linux and Bash (Installation, Configuration, and Use of the Terminal)",
-        "MS Project and Project Management (Gantt and Pert)",
-        "MS Outlook and Exchange Server (Installation, Configuration, and Usage)",
-        "MapInfo and GIS (Installation, Configuration, and Use with Excel)",
-        "MS Word, Excel, PowerPoint (Initiation, Intermediate, and Expert Level)"
-      ]
-    },
-    {
-      period: "2008-2009 (1 year)",
-      title: "Lecturer in Computer Science",
-      place: "NourSAMA Institute",
-      placeDetails: "Dréan, El Tarf",
-      details: [
-        "Lecturing AutoCad and 3DsMax for SCHS (Société Des Ciments De Hadjar-Soud, Skikda)"
-      ]
-    },
-    {
-      period: "1999-2002 (3 years)",
-      title: "Researcher",
-      place: "LRI Laboratory",
-      placeDetails: "Laboratoire de Recherche on Informatique, University of Badji Mokhtar, Annaba, Algeria",
-      details: [
-        "Member of the project MIND, SONATRACH Company, Hassi Messaoud, Ouargla, Algeria",
-        "Working on DCS (Distributed Control System) Yokogawa for Turbo-Chargers (Nuovo Pignone Bi-Shaft), using Java Language"
-      ]
-    },
-    {
-      period: "2002-2003 (1 year)",
-      title: "Lecturer in Computer Science",
-      place: "INSFP Guelma (Ex CFA)",
-      placeDetails: "National Institute of Vocational Training for Management (INSFPG Guelma)",
-      details: [
-        "Lecturing Courses:",
-        "Operating System, Computer Architecture, Pascal and Delphi"
-      ]
-    },
-    {
-      period: "2002-2003 (1 year)",
-      title: "Lecturer in Computer Science",
-      place: "CFPA Guelma",
-      placeDetails: "Centre for Vocational Training and Learning",
-      details: [
-        "Lecturing Courses: Algorithmics, Operating System, Computer Architecture and DataBases"
-      ]
-    },
-    {
-      period: "2006-2008 (2 years)",
-      title: "Lecturer",
-      place: "CLS de Guelma",
-      placeDetails: "Centre de Loisirs Scientifiques",
-      details: [
-        "lecturing Computer Science: MS Office, Web Design, Windows & Linux Operating Systems, MSDos ",
-        "Astronomy: General Astronomy, Solar System, Stars and Galaxies",
-        "MultiMedia & Graphic Design: Adobe Photoshoshop, Adobe Illustrator, Video Editing "
-      ]
-    },
-    {
-      period: "2005-2006",
-      title: "Manager",
-      place: "SaraVoyages Travel Agency",
-      placeDetails: "Guelma",
-      details: [
-        "Webmaster and designer of the saravoyages.com website",
-        "Public relations and communications manager",
+    experience: [
+        {
+            period: "2024-Present",
+            elapsedTime: "",
+            title: "Assistant Professor",
+            place: "Univ. Guelma",
+            placeDetails: "University of 8 May 1945 Guelma, Algeria",
+            details: [
+                "Data Mining",
+                "Object Oriented Programming (Java)",
+                "Compilation",
+                "Computer Architecture 2"
+            ]
+        },
+        {
+            period: "2003-2024",
+            elapsedTime: "",
+            title: "Part-time University Lecturer",
+            place: "University of Guelma",
+            placeDetails: "University of 8 May 1945 Guelma, Algeria",
+            details: [
+                "Object Oriented Programming (Java)",
+                "Logic and Foundations of Computer Science",
+                "Web Design (PHP)",
+                "Office & Web Technology",
+                "Machine Architecture",
+                "Information Systems",
+                "Algorithmic (Pascal)",
+                "Mathematical Programming Tool",
+                "Algorithms And Data Structures (1, 2 and 3)",
+                "Scientific Research Methodologies",
+                "Language Theory and Compilation",
+                "Distributed Information Systems",
+                "Distributed Algorithms and Data Structures",
+                "Operating Systems (1 and 2)",
+                "Databases"
+            ]
+        },
+        {
+            period: "2008-2024",
+            elapsedTime: "15 years 5 months",
+            title: "Head Engineer in Computer Science",
+            place: "ODEJ of Guelma",
+            placeDetails: "Office Des Etablissments de Jeunesse de Guelma",
+            details: [
+                "Supervise computer hardware and software",
+                "Maintain IT systems",
+                "Develop internal applications",
+                "Deploy and maintain applications",
+                "Support staff on IT systems",
+                "Train staff on software usage",
+                "Ensure network security",
+                "Perform regular backups",
+                "Manage user access rights",
+                "Analyze requirements for IT projects",
+                "Document technical requirements",
+                "Coordinate with external vendors",
+                "Procure IT equipment",
+                "Maintain IT equipment",
+                "Monitor network infrastructure",
+                "Troubleshoot servers, routers, switches",
+                "Implement IT policies",
+                "Enforce IT best practices",
+                "Prepare technical reports",
+                "Document for audits and compliance",
+                "Stay updated with technologies",
+                "Recommend IT improvements"
+            ]
+        },
+        {
+            period: "2017-Present",
+            elapsedTime: "",
+            title: "Researcher",
+            place: "LabSTIC Laboratory",
+            placeDetails: "University of 8 May 1945 Guelma, Algeria",
+            details: [
+                "Member of the team: Web Technologies and Intelligent Systems",
+                "Working on Project: Predicting Learning Difficulties in Human Learning Environments",
+                "Published several scientific papers indexed in WebOfScience, Scopus, ERIH Plus and others",
+                "Active participation as organization committee member in LabSTIC-organized conferences and events",
+                "Served as scientific committee member and head of session in several LabSTIC conferences and workshops"
+            ]
+        },
+        {
+            period: "2007-2008",
+            elapsedTime: "1 Year",
+            title: "Lecturer in Computer Science",
+            place: "Naftogaz, SONATRACH",
+            placeDetails: "SONATRACH, Hassi Messaoud, Algeria",
+            details: [
+                "Windows Server and Network Administration (Installation, Configuration)",
+                "MS Active Directory and ISA Server (Installation, Configuration, and Usage)",
+                "Linux and Bash (Installation, Configuration, and Use of the Terminal)",
+                "MS Project and Project Management (Gantt and Pert)",
+                "MS Outlook and Exchange Server (Installation, Configuration, and Usage)",
+                "MapInfo and GIS (Installation, Configuration, and Use with Excel)",
+                "MS Word, Excel, PowerPoint (Initiation, Intermediate, and Expert Level)"
+            ]
+        },
+        {
+            period: "2008-2009",
+            elapsedTime: "1 year",
+            title: "Lecturer in Computer Science",
+            place: "NourSAMA Institute",
+            placeDetails: "Dréan, El Tarf",
+            details: [
+                "Lecturing AutoCad and 3DsMax for SCHS (Société Des Ciments De Hadjar-Soud, Skikda)"
+            ]
+        },
+        {
+            period: "1999-2002",
+            elapsedTime: "3 years",
+            title: "Researcher",
+            place: "LRI Laboratory",
+            placeDetails: "Laboratoire de Recherche on Informatique, University of Badji Mokhtar, Annaba, Algeria",
+            details: [
+                "Member of the project MIND, SONATRACH Company, Hassi Messaoud, Ouargla, Algeria",
+                "Working on DCS (Distributed Control System) Yokogawa for Turbo-Chargers (Nuovo Pignone Bi-Shaft), using Java Language"
+            ]
+        },
+        {
+            period: "2002-2003",
+            elapsedTime: "1 year",
+            title: "Lecturer in Computer Science",
+            place: "INSFP Guelma (Ex CFA)",
+            placeDetails: "National Institute of Vocational Training for Management (INSFPG Guelma)",
+            details: [
+                "Lecturing Courses:",
+                "Operating System, Computer Architecture, Pascal and Delphi"
+            ]
+        },
+        {
+            period: "2002-2003",
+            elapsedTime: "1 year",
+            title: "Lecturer in Computer Science",
+            place: "CFPA Guelma",
+            placeDetails: "Centre for Vocational Training and Learning",
+            details: [
+                "Lecturing Courses: Algorithmics, Operating System, Computer Architecture and DataBases"
+            ]
+        },
+        {
+            period: "2006-2008",
+            elapsedTime: "2 years",
+            title: "Lecturer",
+            place: "CLS de Guelma",
+            placeDetails: "Centre de Loisirs Scientifiques",
+            details: [
+                "lecturing Computer Science: MS Office, Web Design, Windows & Linux Operating Systems, MSDos ",
+                "Astronomy: General Astronomy, Solar System, Stars and Galaxies",
+                "MultiMedia & Graphic Design: Adobe Photoshoshop, Adobe Illustrator, Video Editing "
+            ]
+        },
+        {
+            period: "2005-2006",
+            elapsedTime: "",
+            title: "Manager",
+            place: "SaraVoyages Travel Agency",
+            placeDetails: "Guelma",
+            details: [
+                "Webmaster and designer of the saravoyages.com website",
+                "Public relations and communications manager",
 
-      ]
-    },
-    {
-      period: "1999-2006 (7 years)",
-      title: "Trainer",
-      place: "MJMY, Guelma",
-      placeDetails: "M'Hamdi Youcef Youth Center, Guelma",
-      details: [
-        "Website design, training of members, maintenance of equipment and network",
-        "Video editing and processing, image processing, design of advertising posters",
-        "Sound processing, 3D design"
-      ]
-    },
-    {
-      period: "1999-2001 (2 years)",
-      title: "Internship",
-      place: "SONATRACH company",
-      placeDetails: "Maintenance Department, SONATRACH company, Hassi Messaoud, South Directorate",
-      details: [
-        "Member of the team working on the national PROJECT MIND (INDUSTRIAL Maintenance)",
-        "Working on the DCS (Distributed Control System) Yokogawa for Turbo-Chargers (Nuovo Pignone Bi-Shaft)",
-        "Coding a simulator of the DCS synapthics using the Java Language"
-      ]
-    }
-  ],
-  projects: [
-    {
-      period: "2017-2022 (5 years)",
-      title: "PhD Degree Research Project",
-      details: [
-        "Agent-based approach for the prediction of the behaviors of learners in difficulty in human learning environments.",
-        "Design and realization of a distance education platform 'e-learning' for the detection and prediction of learners in difficulty, using PHP, MySQL, HTML, CSS, JS languages"
-      ]
-    },
-    {
-      period: "2015-2016 (1 year)",
-      title: "Master's Degree Final Project",
-      details: [
-        "Mastery of the behavior of a MultiAgent system.",
-        "Design and realization of a platform capable of segmenting an image using Multi-Agent System (cooperation in Contour and Region Segmentation), Language: Java"
-      ]
-    },
-    {
-      period: "2001-2002 (1 year)",
-      title: "Engineer's Degree Final Project",
-      details: [
-        "Load Distribution in a Network.",
-        "Design and realization of a load distribution architecture in a network using the object-oriented model of Java RMI"
-      ]
-    },
-    {
-      period: "1999-2002 (3 years)",
-      title: "Fault Diagnosis System",
-      details: [
-        "Realizing a DCS (Yokogawa) system simulation using Java as part of the MIND project (Industrial Maintenance in partnership with DP Sud HMD, SONATRACH)"
-      ]
-    },
-    {
-      period: "2000-2001 (1 year)",
-      title: "Mini-Project 'From virus to antivirus'",
-      details: [
-        "Implementing several Computer Viruses (com infectors, companions, parasites, and systems) in Assembly Language with Assembler 8086"
-      ]
-    },
-    {
-      period: "2003-2007 (4 years)",
-      title: "Bachelor's Degree Projects Supervision",
-      details: [
-        "Supervision of 8 Bachelor's degree projects in Dynamic Information Systems and Web, University of 8 Mai 1945 Guelma Informatique"
-      ]
-    },
-    {
-      period: "2003-2007 (4 years)",
-      title: "Engineer's Degree Projects Co-Supervision",
-      details: [
-        "Co-Supervision of three Engineer's Degree final projects: Quantum Cryptography using Java language, Semantic Web using Java language, PHP Glossary"
-      ]
-    },
-    {
-      period: "2005-2011 (6 years)",
-      title: "3D Video scenes",
-      details: [
-        "About 'Banque d'Algérie' Tébessa headquarters, using 3DS Max"
-      ]
-    },
-    {
-      period: "2005-2007 (2 years)",
-      title: "Adobe Flash animations",
-      details: [
-        "For the Pfizer Laboratory in the marketing project of L'Acuilix et le Tahor (drugs for cholesterol)"
-      ]
-    }
-  ],
+            ]
+        },
+        {
+            period: "1999-2006",
+            elapsedTime: "7 years",
+            title: "Trainer",
+            place: "MJMY, Guelma",
+            placeDetails: "M'Hamdi Youcef Youth Center, Guelma",
+            details: [
+                "Website design, training of members, maintenance of equipment and network",
+                "Video editing and processing, image processing, design of advertising posters",
+                "Sound processing, 3D design"
+            ]
+        },
+        {
+            period: "1999-2001",
+            elapsedTime: "2 years",
+            title: "Internship",
+            place: "SONATRACH company",
+            placeDetails: "Maintenance Department, SONATRACH company, Hassi Messaoud, South Directorate",
+            details: [
+                "Member of the team working on the national PROJECT MIND (INDUSTRIAL Maintenance)",
+                "Working on the DCS (Distributed Control System) Yokogawa for Turbo-Chargers (Nuovo Pignone Bi-Shaft)",
+                "Coding a simulator of the DCS synapthics using the Java Language"
+            ]
+        }
+    ],
+    projects: [
+        {
+            period: "2017-2022",
+            elapsedTime: "5 years",
+            title: "PhD Degree Research Project",
+            details: [
+                "Agent-based approach for the prediction of the behaviors of learners in difficulty in human learning environments.",
+                "Design and realization of a distance education platform 'e-learning' for the detection and prediction of learners in difficulty, using PHP, MySQL, HTML, CSS, JS languages"
+            ]
+        },
+        {
+            period: "2015-2016",
+            elapsedTime: "1 year",
+            title: "Master's Degree Final Project",
+            details: [
+                "Mastery of the behavior of a MultiAgent system.",
+                "Design and realization of a platform capable of segmenting an image using Multi-Agent System (cooperation in Contour and Region Segmentation), Language: Java"
+            ]
+        },
+
+
+        {
+            period: "2003-2007",
+            elapsedTime: "4 years",
+            title: "Bachelor's Degree Projects Supervision",
+            details: [
+                "Supervision of several Bachelor's Degree final projects in Computer Science, at the University of 8 Mai 1945 Guelma, Algeria, including:",
+                "1. 2007: \"Gestion de pharmacie\", Dafri Ahmed, Nehili Bilal.",
+                "2. 2005: \"Conception et réalisation d\'un système d\'information pour suivi des mandatements au niveau de rectorat d\'université de Guelma\", Bazine Zouheyr, Djehem Abdelhak, Djehouchi Ramzi.",
+                "3. 2005: \"Conception et Réalisation d\'un Système d\'information pour La Gestion de Mouvement d\'Entrée et Sortie des Produits An Sein du CIAJ -Guelma-\", Boukerche Linda, Mahmoudi Latifa, Bouras Nadjette.",
+                "4. 2005: \"Conception et Réalisation d\"un Site Web Dynamique (.ASP) Gestion Pharmaceutique\", Djedouani Nafaa, hassanI Farid, Abbas Abdelsalem.",
+                "5. 2004: \"Suivi de réclamation des dégrèvements des impôts de la wilaya de Guelma\", Kouadria Naïma, MaaÏzia Assia.",
+                "6. 2004: \"Suivi de la gestion du budget au sein du laboratoire d\"automatique et d\"informatique Guelma\", Elbir Houda, Elbir Farida, Bouchemala Samiha.",
+                "7. 2004: \"Conception et réalisation d\'un système d information de gestion du personnel au sein de l\'entreprise nationale du sucre\", Batah Razika, Kharoubi Ahleme, Fraga Houda.",
+                "8. 2003: \"Conception et réalisation d\"un système d\"information relatif à la gestion de la paie au sein de la résidence universitaire mixte de Guelma\", Ceioud Rabah, Brahmia Mehmoud, Idrissi Abdelmalik."
+            ]
+        },
+        // {
+        //     period: "2003-2007",
+        //     elapsedTime: "4 years",
+        //     title: "Engineer's Degree Projects Co-Supervision",
+        //     details: [
+        //         "Co-Supervision of three Engineer's Degree final projects:" ,
+        //         "Quantum Cryptography using Java language",
+        //         "Semantic Web using Java language",
+        //         "PHP Glossary"
+        //     ]
+        // },
+        {
+            period: "2005-2011",
+            elapsedTime: "6 years",
+            title: "3D Video scenes",
+            details: [
+                "About 'Banque d'Algérie' Tébessa headquarters, using 3DS Max"
+            ]
+        },
+        {
+            period: "2005-2007",
+            elapsedTime: "2 years",
+            title: "Adobe Flash animations",
+            details: [
+                "For the Pfizer Laboratory in the marketing project of L'Acuilix et le Tahor (drugs for cholesterol)"
+            ]
+        },
+        {
+            period: "1999-2002",
+            elapsedTime: "3 years",
+            title: "Fault Diagnosis System",
+            details: [
+                "Realizing a DCS (Yokogawa) system simulation using Java as part of the MIND project (Industrial Maintenance in partnership with DP Sud HMD, SONATRACH)"
+            ]
+        },
+        {
+            period: "2001-2002",
+            elapsedTime: "1 year",
+            title: "Engineer's Degree Final Project",
+            details: [
+                "Load Distribution in a Network.",
+                "Design and realization of a load distribution architecture in a network using the object-oriented model of Java RMI"
+            ]
+        },
+        {
+            period: "2000-2001",
+            elapsedTime: "1 year",
+            title: "Mini-Project 'From virus to antivirus'",
+            details: [
+                "Implementing several Computer Viruses (com infectors, companions, parasites, and systems) in Assembly Language with Assembler 8086"
+            ]
+        }
+      ],
   skills: {
     programming: [
       "SQL", "Java (J2SE, J2EE)", "C", "Assembler", "Pascal", "Prolog", "basic", "dBase", "clipper", "VBA for MS Office"
@@ -434,11 +476,41 @@ export const cvData = {
     }
   ],
   conferences: [
+      {
+          year: "2025",
+          title: "",
+          event: "The 8th International Hybrid Conference on Informatics and Applied Mathematics IAM'25",
+          participation: [
+              "Scientific committee member",
+          ]
+      },
+      {
+          year: "2025",
+          title: "",
+          event: "The 1st Workshop on Artificial Intelligence and Applications (AIA '25)",
+          participation: [
+              "Organization committee member",
+              "Scientific committee member",
+          ]
+      },
+      {
+          year: "2025",
+          title: "",
+          event: "NCNETI25: The 2nd National Conference on New Educational Technologies and Informatics",
+          link: "https://ncneti25.github.io",
+          participation: [
+            //   "Speaker",
+              "Organization committee member",
+              "Scientific committee member",
+            //   "Head of session"
+          ]
+      },
     {
       year: "2024",
       title: "",
-      event: "The 7th International Hybrid Conference on Informatics and Applied Mathematics IAM'23",
+      event: "The 7th International Hybrid Conference on Informatics and Applied Mathematics IAM'24",
       participation: [
+        "Organization committee member",
         "Scientific committee member",
       ]
     },

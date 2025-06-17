@@ -110,7 +110,7 @@ function App() {
                 <SocialMediaBlock social={social} />
             </div>
             <div className="cv-container bg-white rounded-4 shadow p-4">
-                <div className="header d-flex flex-column flex-md-column flex-lg-row gap-3">
+                <div className="header d-flex flex-column flex-md-column flex-lg-row gap-3 mb-0">
                     <div className="w-100">
                         <div className="d-flex flex-row flex-wrap align-items-center mb-2 justify-content-center justify-content-lg-start text-center text-lg-start">
                             <div className="w-100 d-flex flex-column align-items-center align-items-lg-start">
@@ -156,20 +156,22 @@ function App() {
                                                 <i className="fab fa-whatsapp icon" />
                                             </a>
                                         )}
-                                        <i className="fas fa-phone icon" /> {contacts.phone}
-                                        &nbsp; | &nbsp;&nbsp;
-                                        {/* <i className="fas fa-map-marker-alt icon" /> */}
-                                        {contacts.email && (
-                                            <a href={contacts.gmail} target="_blank" rel="noopener noreferrer" title="Gmail" >
-                                                <i style={{ color: 'red' }} className="far fa-envelope icon"></i>
-                                                <span>rochdiboudjehem@gmail.com</span>
-                                            </a>
-                                        )}
+                                        <a href={`tel:${contacts.phone.replace(/[^\d+]/g, '')}`} target="_blank" rel="noopener noreferrer" title="Call">
+                                            <i className="fa fa-phone icon" />
+                                            <span>{contacts.phone}</span>
+                                        </a>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <a href={`mailto:${contacts.gmail}`} target="_blank" rel="noopener noreferrer" title="Gmail">
+                                            <i className="far fa-envelope icon-only" style={{ color: 'red' }}></i>
+                                            <span>{contacts.gmail}</span>
+                                        </a>
                                     </div>
                                     <hr style={{ margin: '3px 0', border: 0, borderTop: '1px solid #ccc' }} />
 
                                 </div>
                                 <div style={{ marginTop: 0, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                    <hr style={{ margin: '3px 0', border: 0, borderTop: '1px solid #ccc' }} />
+
                                 </div>
                             </div>
                         </div>

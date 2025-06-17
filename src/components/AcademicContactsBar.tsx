@@ -43,6 +43,17 @@ const academicAccounts = [
   },
 ];
 
+const academicColors: Record<string, string> = {
+  'Web of Science': '#e6b800', // Clarivate yellow
+  'Scopus': '#ff8300',         // Scopus orange
+  'Google Scholar': '#4285f4', // Google blue
+  'ORCID': '#3ac03a',          // ORCID green
+  'ResearchGate': '#00d0af',   // ResearchGate teal
+  'Semantic Scholar': '#f6c700', // Semantic Scholar yellow
+  'Academia.edu': '#414141',   // Academia dark gray
+  'DBLP': '#0077cc',           // DBLP blue
+};
+
 const AcademicContactsBar: React.FC<{ mode?: 'row' }> = ({ mode }) => (
   <div
     className={
@@ -59,10 +70,10 @@ const AcademicContactsBar: React.FC<{ mode?: 'row' }> = ({ mode }) => (
         target="_blank"
         rel="noopener noreferrer"
         title={acc.label}
-        className="text-primary fs-5 d-flex align-items-center gap-1 text-decoration-none py-1"
+        className="fs-5 d-flex align-items-center gap-1 text-decoration-none py-1"
         style={{ transition: 'color 0.2s' }}
       >
-        <i className={acc.iconClass + ' icon'} />
+        <i className={acc.iconClass + ' icon-only'} style={{ color: academicColors[acc.label] || '#1976d2' }} />
       </a>
     ))}
   </div>

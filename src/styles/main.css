@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
 .cv-section ul {
   list-style: none;
   padding-left: 0;
@@ -41,6 +43,38 @@ body {
   color: #888;
   font-size: 1.2rem;
   border: 2px dashed #bbb;
+}
+
+.photo-placeholder-responsive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.profile-img-responsive {
+  width: 140px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 2px solid #eee;
+}
+
+@media (max-width: 991.98px) {
+  .profile-img-responsive {
+    width: 170px;
+    height: 192px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .profile-img-responsive {
+    width: 180px;
+    height: 220px;
+  }
 }
 
 h1, h2, h3 {
@@ -241,4 +275,90 @@ h2 {
   .section-button-icon {
     font-size: 14px !important;
   }
+}
+
+.icon,
+.section-header .icon,
+.cv-section ul > li > i,
+.cv-section ul > li > ul > li > i,
+.cv-section ul > li > ul > li > ul > li > i,
+.cv-section ul > li > ul > li > ul > li > ul > li > i {
+  margin-right: 0.5em;
+  margin-left: 0;
+  vertical-align: middle;
+}
+
+/* Remove extra right margin if icon is last in a line or block */
+.cv-section ul > li > i:last-child,
+.cv-section ul > li > ul > li > i:last-child,
+.cv-section ul > li > ul > li > ul > li > i:last-child,
+.cv-section ul > li > ul > li > ul > li > ul > li > i:last-child {
+  margin-right: 0;
+}
+
+/* Social/contact icons in header - consistent size and alignment */
+.header .contact-section a .fab,
+.header .contact-section a .fas,
+.header .contact-section a .far {
+  font-size: 1.25em;
+  min-width: 1.5em;
+  vertical-align: middle;
+  line-height: 1;
+}
+.header .contact-section .fas.fa-phone {
+  font-size: 1.25em;
+  min-width: 1.5em;
+  vertical-align: middle;
+  line-height: 1;
+  margin-right: 0.5em;
+}
+.header .contact-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+.header .contact-section span,
+.header .contact-section a {
+  display: flex;
+  align-items: center;
+}
+
+.header .contact-section a .icon,
+.header .contact-section span .icon {
+  margin-right: 0.5em;
+  margin-left: 0;
+}
+
+/* Remove right margin for icons in links with no following text (icon-only links) */
+.header .contact-section a.icon-only .icon {
+  margin-right: 0;
+}
+
+/* Utility: Add this class to icon-only links in your JSX/HTML */
+/* Example: <a className="icon-only" ...><i className="fab fa-telegram icon"></i></a> */
+
+/* Remove right margin if icon is the only child or last in its flex container */
+.header .contact-section a .icon:last-child,
+.header .contact-section span .icon:last-child {
+  margin-right: 0;
+}
+
+/* Remove right margin for icons in links with no following text */
+.header .contact-section a:not(:has(span)) .icon {
+  margin-right: 0;
+}
+
+/* Official Telegram and WhatsApp brand colors for icons in header contact section */
+.header .contact-section a[href*="t.me"] .icon {
+  color: #229ED9 !important; /* Telegram blue */
+}
+.header .contact-section a[href*="wa.me"] .icon {
+  color: #25D366 !important; /* WhatsApp green */
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none !important;
 }

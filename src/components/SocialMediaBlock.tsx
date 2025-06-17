@@ -32,6 +32,20 @@ const SocialMediaBlock: React.FC<SocialMediaBlockProps> = ({ social, mode }) => 
     reddit: 'fa-reddit',
   };
 
+  const socialColors: Record<string, string> = {
+    telegram: '#229ED9',
+    linkedin: '#0077b5',
+    facebook: '#1877f3',
+    twitter: '#1da1f2',
+    youtube: '#ff0000',
+    instagram: '#e4405f',
+    tiktok: '#010101',
+    github: '#333',
+    whatsapp: '#25d366',
+  discord: '#5662f6',
+    reddit: '#ff4500',
+  };
+
   return (
     <div
       className={
@@ -50,10 +64,13 @@ const SocialMediaBlock: React.FC<SocialMediaBlockProps> = ({ social, mode }) => 
             target="_blank"
             rel="noopener noreferrer"
             title={platform.charAt(0).toUpperCase() + platform.slice(1)}
-            className="text-primary fs-5 d-flex align-items-center text-decoration-none py-1"
+            className="fs-5 d-flex align-items-center text-decoration-none py-1"
             style={{ transition: 'color 0.2s' }}
           >
-            <i className={`fab ${socialIcons[platform as keyof typeof socialIcons]}`} />
+            <i
+              className={`fab ${socialIcons[platform as keyof typeof socialIcons]}`}
+              style={{ color: socialColors[platform] || '#1976d2' }}
+            />
           </a>
         ))}
     </div>
