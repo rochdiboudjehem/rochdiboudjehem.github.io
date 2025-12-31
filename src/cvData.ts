@@ -61,7 +61,7 @@ export const cvData = {
     {
       degree: "Engineer in Computer Science - Hardware and Software",
       year: "2002",
-      institution: "University of Badji Mokhtar, Annaba, Algeria",
+      institution: "University of Badji Mokhtar - Annaba, Algeria",
       // thesis: "Distribution de charge dans un réseau"
     },
     {
@@ -184,7 +184,7 @@ export const cvData = {
             elapsedTime: "3 years",
             title: "Researcher",
             place: "LRI Laboratory",
-            placeDetails: "Laboratoire de Recherche on Informatique, University of Badji Mokhtar, Annaba, Algeria",
+            placeDetails: "Laboratoire de Recherche en Informatique, University of Badji Mokhtar - Annaba, Algeria",
             details: [
                 "Member of the project MIND, SONATRACH Company, Hassi Messaoud, Ouargla, Algeria",
                 "Working on DCS (Distributed Control System) Yokogawa for Turbo-Chargers (Nuovo Pignone Bi-Shaft), using Java Language"
@@ -218,9 +218,9 @@ export const cvData = {
             place: "CLS de Guelma",
             placeDetails: "Centre de Loisirs Scientifiques",
             details: [
-                "lecturing Computer Science: MS Office, Web Design, Windows & Linux Operating Systems, MSDos ",
+                "Lecturing Computer Science: MS Office, Web Design, Windows & Linux Operating Systems, MS-DOS",
                 "Astronomy: General Astronomy, Solar System, Stars and Galaxies",
-                "MultiMedia & Graphic Design: Adobe Photoshoshop, Adobe Illustrator, Video Editing "
+                "MultiMedia & Graphic Design: Adobe Photoshop, Adobe Illustrator, Video Editing"
             ]
         },
         {
@@ -289,12 +289,12 @@ export const cvData = {
                 "Supervision of several Bachelor's Degree final projects in Computer Science, at the University of 8 Mai 1945 Guelma, Algeria, including:",
                 "1. 2007: \"Gestion de pharmacie\", Dafri Ahmed, Nehili Bilal.",
                 "2. 2005: \"Conception et réalisation d\'un système d\'information pour suivi des mandatements au niveau de rectorat d\'université de Guelma\", Bazine Zouheyr, Djehem Abdelhak, Djehouchi Ramzi.",
-                "3. 2005: \"Conception et Réalisation d\'un Système d\'information pour La Gestion de Mouvement d\'Entrée et Sortie des Produits An Sein du CIAJ -Guelma-\", Boukerche Linda, Mahmoudi Latifa, Bouras Nadjette.",
-                "4. 2005: \"Conception et Réalisation d\"un Site Web Dynamique (.ASP) Gestion Pharmaceutique\", Djedouani Nafaa, hassanI Farid, Abbas Abdelsalem.",
+                "3. 2005: \"Conception et Réalisation d\'un Système d\'information pour La Gestion de Mouvement d\'Entrée et Sortie des Produits Au Sein du CIAJ -Guelma-\", Boukerche Linda, Mahmoudi Latifa, Bouras Nadjette.",
+                "4. 2005: \"Conception et Réalisation d\"un Site Web Dynamique (.ASP) Gestion Pharmaceutique\", Djedouani Nafaa, Hassani Farid, Abbas Abdelsalem.",
                 "5. 2004: \"Suivi de réclamation des dégrèvements des impôts de la wilaya de Guelma\", Kouadria Naïma, MaaÏzia Assia.",
                 "6. 2004: \"Suivi de la gestion du budget au sein du laboratoire d\"automatique et d\"informatique Guelma\", Elbir Houda, Elbir Farida, Bouchemala Samiha.",
                 "7. 2004: \"Conception et réalisation d\'un système d information de gestion du personnel au sein de l\'entreprise nationale du sucre\", Batah Razika, Kharoubi Ahleme, Fraga Houda.",
-                "8. 2003: \"Conception et réalisation d\"un système d\"information relatif à la gestion de la paie au sein de la résidence universitaire mixte de Guelma\", Ceioud Rabah, Brahmia Mehmoud, Idrissi Abdelmalik."
+                "8. 2003: \"Conception et réalisation d\"un système d\"information relatif à la gestion de la paie au sein de la résidence universitaire mixte de Guelma\", Ceioud Rabah, Brahmia Mahmoud, Idrissi Abdelmalik."
             ]
         },
         // {
@@ -393,7 +393,7 @@ export const cvData = {
           issue: "4",
           pages: "456-478",
           abstract: [
-            "In this paper, we present an approach for online course evaluation based on learners’ behaviors during the learning process, where the course creator can monitor the quality status of their online courses based on learners’ learning outcomes and then intervene to improve the success rate. For this purpose, a set of criteria has been developed. These criteria concern learners’ cognitive, affective and academic engagement. The proposed approach was adopted by a system consisting of four parts: a learning management system, a LOG preprocessing manager, a quality assessment manager, and a visualization and intervention manager. A first test was carried out on a sample of 33 students from the Department of Economics at the University of Guelma(Algeria), where the results obtained were very encouraging and promising."
+            "In this paper, we present an approach for online course evaluation based on learners' behaviors during the learning process, where the course creator can monitor the quality status of their online courses based on learners' learning outcomes and then intervene to improve the success rate. For this purpose, a set of criteria has been developed. These criteria concern learners' cognitive, affective and academic engagement. The proposed approach was adopted by a system consisting of four parts: a learning management system, a LOG preprocessing manager, a quality assessment manager, and a visualization and intervention manager. A first test was carried out on a sample of 33 students from the Department of Economics at the University of Guelma (Algeria), where the results obtained were very encouraging and promising."
           ]
         },
         {
@@ -463,7 +463,7 @@ export const cvData = {
           authors: "Boudjehem, R. & Bendjedid B.",
           year: "2002",
           title: "Distribution de charge dans un réseau",
-          journal: "[Engineer's thesis, University of Badji Mokhtar, Annaba, Algeria]",
+          journal: "[Engineer's thesis, University of Badji Mokhtar - Annaba, Algeria]",
           volume: "",
           issue: "",
           pages: "",
@@ -549,10 +549,10 @@ export const cvData = {
     },
     {
       year: "2022",
-      authors: "Boudjehem, R., & Lafifi, Y.",
+      authors: "Abda, Y., Mehnaoui, Z., Boudjehem, R., & Lafifi, Y.",
       title: "A study on the factors affecting the quality of learning content in the context of e-learning",
       event: "MOAD'2022: Colloque International: Méthodes et Outils d'Aide à la Décision",
-      place: "University of Bedjaia, Algeria",
+      place: "University of Bejaia, Algeria",
       participation: [
         "Program committee member"
       ]
@@ -569,10 +569,10 @@ export const cvData = {
     },
     {
       year: "2020",
-      authors: "Boudjehem, R., & Lafifi, Y.",
+      authors: "Benyounes, A., Boudjehem, R., & Lafifi, Y.",
       title: "Study of the impact of collaboration among learners during the learning of Object-Oriented Programming",
       event: "8th International Conference on Future Learning and Informatics: Data Revolution",
-      place: "University of Istanbul, Turkey",
+      place: "Istanbul University, Turkey",
       link: "https://fl2022.istanbul.edu.tr/en",
       participation: [
         "Speaker",
@@ -580,14 +580,14 @@ export const cvData = {
     },
     {
       year: "2019",
-      authors: "Boudjehem, R., & Lafifi, Y.",
+      authors: "Lafifi, Y., Boudjehem, R., Benoughiden, R., & Mehnaoui, Z",
       title: "LISP(P): A new pedagogical approach for learning mathematics in Colleges",
       event: "The 1st International Conference on Innovative Trends in Computer Science (CITCS'2019)",
       place: "University of 8 Mai 1945 Guelma, Algeria",
       link: "https://easychair.org/publications/preprint_download/hCTG",
       participation: [
         "Speaker",
-        "Ogranization committee member"
+        "Organization committee member"
       ]
     },
     {
