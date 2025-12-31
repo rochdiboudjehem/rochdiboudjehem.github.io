@@ -136,7 +136,7 @@ function App() {
                                 </div>
                                 <div>
                                     {contacts.email && (
-                                        <a href={contacts.email} target="_blank" rel="noopener noreferrer" title="Email">
+                                        <a href={`mailto:${contacts.email}`} target="_blank" rel="noopener noreferrer" title="Email">
                                             <i className="fas fa-envelope icon"></i>
                                             <span>{contacts.email}</span>
                                         </a>
@@ -144,7 +144,7 @@ function App() {
                                 </div>
                                 <hr style={{ margin: '3px 0', border: 0, borderTop: '1px solid #ccc' }} />
                                 <div className="contact-section">
-                                      {/* Social Accounts */}
+                                      {/* Social Accounts 2 */}
                                     <div style={{ display: 'flex', flexWrap: 'wrap', }}>
                                         {social.telegram && (
                                             <a href={social.telegram} target="_blank" rel="noopener noreferrer" title="Telegram">
@@ -696,8 +696,10 @@ function App() {
                                     <ConferenceItem
                                         key={i}
                                         year={c.year}
+                                        authors={c.authors}
                                         title={c.title}
                                         event={c.event}
+                                        place={c.place}
                                         link={c.link}
                                         participation={c.participation}
                                     />
@@ -738,9 +740,9 @@ function App() {
                             </div>
                         </CVSection>
                 {/* Hide floating bars on mobile */}
-                <div className="d-none d-lg-block">
+                {/* <div className="d-none d-lg-block">
                     <SocialMediaBlock social={social} />
-                </div>
+                </div> */}
                 <ScrollToTop />
             </div>
         </div>

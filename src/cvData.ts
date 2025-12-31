@@ -12,7 +12,7 @@ export const cvData = {
     institution: "University of 8 Mai 1945 Guelma, Algeria"
   },
   contacts: {
-    email: "rochdi.boudjehem@univ-guelma.dz",
+    email: "boudjehem.rochdi@univ-guelma.dz",
     gmail: "rochdiboudjehem@gmail.com",
     phone: "+213 669178674",
     address: "Guelma, Algeria",
@@ -150,7 +150,7 @@ export const cvData = {
                 "Working on Project: Predicting Learning Difficulties in Human Learning Environments",
                 "Published several scientific papers indexed in WebOfScience, Scopus, ERIH Plus and others",
                 "Active participation as organization committee member in LabSTIC-organized conferences and events",
-                "Served as scientific committee member and head of session in several LabSTIC conferences and workshops"
+                "Served as Program committee member and head of session in several LabSTIC conferences and workshops"
             ]
         },
         {
@@ -478,83 +478,101 @@ export const cvData = {
   conferences: [
       {
           year: "2025",
+          authors: "",
           title: "",
-          event: "The 8th International Hybrid Conference on Informatics and Applied Mathematics IAM'25",
+          event: "International Conference on Applied Artificial Intelligence and Emerging Technologies, AAIET'25",
+          place: "University Ziane Achour, Djelfa, Algeria",
           participation: [
-              "Scientific committee member",
+              "Program committee member",
+              "Head of session"
           ]
       },
       {
           year: "2025",
-          title: "",
-          event: "The 1st Workshop on Artificial Intelligence and Applications (AIA '25)",
+          authors: "Boudjehem, R., & Lafifi, Y.",
+          title: "Tumor Detection in Cardiac MRI: Left Atrium Localization using ConvNeXt Encoders and LSTM-based Slice Context",
+         event: "The 8th International Hybrid Conference on Informatics and Applied Mathematics IAM'25",
+          place: "University of 8 Mai 1945 Guelma, Algeria",
           participation: [
               "Organization committee member",
-              "Scientific committee member",
+              "Speaker",
           ]
       },
       {
           year: "2025",
-          title: "",
+          authors: "Boudjehem, R., & Lafifi, Y.",
+          title: "Federated Learning for Learner Dropout Prediction: A Comprehensive Survey and Analysis",
           event: "NCNETI25: The 2nd National Conference on New Educational Technologies and Informatics",
+          place: "University of 8 Mai 1945 Guelma, Algeria",
           link: "https://ncneti25.github.io",
           participation: [
-            //   "Speaker",
+              "Speaker",
               "Organization committee member",
-              "Scientific committee member",
-            //   "Head of session"
+              "Program committee member",
           ]
       },
     {
       year: "2024",
+      authors: "",
       title: "",
       event: "The 7th International Hybrid Conference on Informatics and Applied Mathematics IAM'24",
+      place: "University of 8 Mai 1945 Guelma, Algeria",
       participation: [
-        "Organization committee member",
-        "Scientific committee member",
+        // "Organization committee member",
+        "Program committee member",
       ]
     },
     {
       year: "2023",
+      authors: "Boudjehem, R., & Lafifi, Y.",
       title: "Intelligent E-tutoring System to Help New-Coming Students",
       event: "The 6th International Hybrid Conference on Informatics and Applied Mathematics IAM'23",
+      place: "University of 8 Mai 1945 Guelma, Algeria",
       participation: [
         "Speaker",
-        "Scientific committee member",
+        "Program committee member",
       ]
     },
     {
       year: "2023",
+      authors: "Boudjehem, R., & Lafifi, Y.",
       title: "A New Learner Model to Predict 'Slow Learners' Using Machine Learning",
       event: "NCNETI23: The 1st National Conference on New Educational Technologies and Informatics",
+      place: "University of 8 Mai 1945 Guelma, Algeria",
       link: "https://ncneti23.github.io/assets/pdf/NCNETI23%20Proceedings%20Final%20%20.pdf",
       participation: [
         "Speaker",
         "Organization committee member",
-        "Scientific committee member",
+        "Program committee member",
         "Head of session"
       ]
     },
     {
       year: "2022",
+      authors: "Boudjehem, R., & Lafifi, Y.",
       title: "A study on the factors affecting the quality of learning content in the context of e-learning",
       event: "MOAD'2022: Colloque International: Méthodes et Outils d'Aide à la Décision",
+      place: "University of Bedjaia, Algeria",
       participation: [
-        "Scientific committee member"
+        "Program committee member"
       ]
     },
     {
       year: "2022",
+      authors: "Boudjehem, R., & Lafifi, Y.",
       title: "Using Machine Learning Techniques to Detect Learners with Learning Difficulties",
       event: "IAM22: 5th Conference on Informatics and Applied Mathematics",
+      place: "University of 8 Mai 1945 Guelma, Algeria",
       participation: [
         "Speaker",
       ]
     },
     {
       year: "2020",
+      authors: "Boudjehem, R., & Lafifi, Y.",
       title: "Study of the impact of collaboration among learners during the learning of Object-Oriented Programming",
       event: "8th International Conference on Future Learning and Informatics: Data Revolution",
+      place: "University of Istanbul, Turkey",
       link: "https://fl2022.istanbul.edu.tr/en",
       participation: [
         "Speaker",
@@ -562,8 +580,10 @@ export const cvData = {
     },
     {
       year: "2019",
+      authors: "Boudjehem, R., & Lafifi, Y.",
       title: "LISP(P): A new pedagogical approach for learning mathematics in Colleges",
       event: "The 1st International Conference on Innovative Trends in Computer Science (CITCS'2019)",
+      place: "University of 8 Mai 1945 Guelma, Algeria",
       link: "https://easychair.org/publications/preprint_download/hCTG",
       participation: [
         "Speaker",
@@ -572,8 +592,10 @@ export const cvData = {
     },
     {
       year: "2019",
+      authors: "Boudjehem, R., & Lafifi, Y.",
       title: "A decision support system to assist course design teachers",
       event: "IAM19: 2nd Conference on Informatics and Applied Mathematics",
+      place: "University of 8 Mai 1945 Guelma, Algeria",
       participation: [
         "Speaker",
         "Organization committee member"
@@ -581,8 +603,10 @@ export const cvData = {
     },
     {
       year: "2018",
+      authors: "Boudjehem, R., & Lafifi, Y.",
       title: "Agent-based solutions in distance education",
       event: "IAM'18: Doctoral Days on Informatics and Applied Mathematics",
+      place: "University of 8 Mai 1945 Guelma, Algeria",
       participation: [
         "Speaker"
       ]

@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 
 interface ConferenceItemProps {
   year: string;
+  authors: string;
   title: string;
   event: string;
+  place?: string;
   link?: string;
   participation?: string[];
 }
 
-const ConferenceItem: React.FC<ConferenceItemProps> = ({ year, title, event, link, participation }) => {
+const ConferenceItem: React.FC<ConferenceItemProps> = ({ year, authors, title, event, place, link, participation }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -16,7 +18,7 @@ const ConferenceItem: React.FC<ConferenceItemProps> = ({ year, title, event, lin
       <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
         <i className="fas fa-chalkboard-teacher icon" />
         <div style={{ flex: 1 }}>
-          {year}. {title}.{' '}
+          {authors && `${authors} (${year}). `}{!authors && `${year}. `}{title}{title && '. '}{' '}
           {link ? (
             <a href={link} target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'underline', fontStyle: 'italic' }}>
               {event}
@@ -24,6 +26,7 @@ const ConferenceItem: React.FC<ConferenceItemProps> = ({ year, title, event, lin
           ) : (
             <span style={{ fontStyle: 'italic' }}>{event}</span>
           )}
+          {place && `, ${place}`}
           
           {participation && participation.length > 0 && (
             <button 
