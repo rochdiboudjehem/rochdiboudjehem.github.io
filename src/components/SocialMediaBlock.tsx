@@ -9,7 +9,6 @@ interface SocialMediaBlockProps {
     instagram?: string;
     youtube?: string;
     tiktok?: string;
-    whatsapp?: string;
     github?: string;
     discord?: string;
     reddit?: string;
@@ -27,7 +26,6 @@ const SocialMediaBlock: React.FC<SocialMediaBlockProps> = ({ social, mode }) => 
     instagram: 'fa-instagram',
     tiktok: 'fa-tiktok',
     github: 'fa-github',
-    whatsapp: 'fa-whatsapp',
     discord: 'fa-discord',
     reddit: 'fa-reddit',
   };
@@ -41,7 +39,6 @@ const SocialMediaBlock: React.FC<SocialMediaBlockProps> = ({ social, mode }) => 
     instagram: '#e4405f',
     tiktok: '#010101',
     github: '#333',
-    whatsapp: '#25d366',
   discord: '#5662f6',
     reddit: '#ff4500',
   };

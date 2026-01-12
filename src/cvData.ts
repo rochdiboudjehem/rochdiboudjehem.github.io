@@ -37,7 +37,6 @@ export const cvData = {
     youtube: "https://www.youtube.com/@rochdiboudjehem",
     tiktok: "https://www.tiktok.com/@rochdi.333",
     telegram: "https://t.me/rochdiboudjehem",
-    whatsapp: "https://wa.me/213669178674",
     discord: "https://discord.gg/rochdiboudjehem",
     reddit: "https://www.reddit.com/user/Party-Picture3943/",
 

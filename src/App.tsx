@@ -151,11 +151,6 @@ function App() {
                                                 <i className="fab fa-telegram icon" />
                                             </a>
                                         )}
-                                        {social.whatsapp && (
-                                            <a href={social.whatsapp} target="_blank" rel="noopener noreferrer" title="WhatsApp">
-                                                <i className="fab fa-whatsapp icon" />
-                                            </a>
-                                        )}
                                         <a href={`tel:${contacts.phone.replace(/[^\d+]/g, '')}`} target="_blank" rel="noopener noreferrer" title="Call">
                                             <i className="fa fa-phone icon" />
                                             <span>{contacts.phone}</span>
