@@ -1,142 +1,136 @@
-import React from "react";
-import logoUnivGuelma from "/images/logo-univ-guelma No Text White Strike.svg";
+import { useEffect, useRef, useState } from "react";
+import { sections, openSection } from "../sections";
 
-interface SectionMenuProps {
-  openSection: string | null;
-  onSectionClick: (sectionId: string) => void;
-}
+const logoUnivGuelma = "/images/logo-univ-guelma No Text White Strike.svg";
 
-const sections = [
-  { id: "education", label: "Education", icon: "fa-graduation-cap" },
-  { id: "experience", label: "Experience", icon: "fa-briefcase" },
-  { id: "projects", label: "Projects", icon: "fa-diagram-project" },
-  { id: "skills", label: "Skills", icon: "fa-code" },
-  { id: "publications", label: "Publications", icon: "fa-book" },
-  { id: "conferences", label: "Conferences", icon: "fa-chalkboard-teacher" },
-  { id: "languages", label: "Languages", icon: "fa-language" },
-  { id: "certificates", label: "Certificates", icon: "fa-certificate" },
-  { id: "other", label: "Other", icon: "fa-ellipsis-h" }
-];
+/** Sticky top menu: highlights the section currently in view and opens sections on click. */
+const SectionMenu: React.FC = () => {
+  const [active, setActive] = useState<string | null>(null);
+  const [menuOpen, setMenuOpen] = useState(false); // mobile drop-down menu
+  const navRef = useRef<HTMLElement>(null);
+  const linksRef = useRef<HTMLDivElement>(null);
+  const lastClicked = useRef<string | null>(null);
 
-const sectionColors: Record<string, string> = {
-  education: '#8e44ad', // purple (matches section title icon)
-  experience: '#1976d2', // blue
-  projects: '#16a085', // teal
-  skills: '#e67e22', // orange
-  publications: '#c0392b', // red
-  conferences: '#2980b9', // dark blue
-  languages: '#27ae60', // green
-  certificates: '#f1c40f', // yellow
-  other: '#7f8c8d', // gray
-};
-
-const SectionMenu: React.FC<SectionMenuProps> = ({ openSection, onSectionClick }) => {
-  // Helper to scroll with offset for sticky menu
-  const handleSectionClick = (sectionId: string) => {
-    onSectionClick(sectionId);
-    setTimeout(() => {
-      const element = document.getElementById(sectionId);
-      const menuBar = document.querySelector('.section-menu-bar') as HTMLElement;
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const offset = menuBar ? menuBar.offsetHeight : 0;
-        window.scrollTo({
-          top: rect.top + scrollTop - offset - 4, // -4 for a little gap
-          behavior: 'smooth',
-        });
+  // Scroll-spy: the active section is the last one whose top has passed under the menu.
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const offset = (navRef.current?.offsetHeight ?? 0) + 24;
+      let current: string | null = null;
+      for (const s of sections) {
+        const el = document.getElementById(s.id);
+        if (el && el.getBoundingClientRect().top - offset <= 0) current = s.id;
       }
-    }, 0); // Wait for DOM update
-  };
-
-  // Responsive: show horizontal menu on desktop, top navbar on mobile
-  const [isMobile, setIsMobile] = React.useState(
-    typeof window !== 'undefined' ? window.innerWidth < 992 : false
-  );
-
-  React.useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 992);
+      // At the very bottom a short last section can never reach the top: keep the clicked one.
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      if (atBottom && lastClicked.current) {
+        const el = document.getElementById(lastClicked.current);
+        if (el && el.getBoundingClientRect().top < window.innerHeight) current = lastClicked.current;
+      }
+      setActive(current);
     };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    document.addEventListener("toggle", schedule, true); // <details> open/close changes layout
+    update();
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      document.removeEventListener("toggle", schedule, true);
+    };
   }, []);
 
-  if (isMobile) {
-    // Mobile: Top collapsible menu, vertical stack, 30px left margin for each button
-    return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm border-bottom section-menu-bar">
-        <div className="container-fluid" >
-          <a className="navbar-brand d-flex align-items-center" href="#" style={{ minWidth: 120 }}>
-            <img src={logoUnivGuelma} alt="University of Guelma Logo" style={{ height: 40, marginRight: 8 }} />
-          </a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sectionMenuCollapse" aria-controls="sectionMenuCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="sectionMenuCollapse">
-            <ul className="navbar-nav w-100 flex-column align-items-stretch">
-              {sections.map(section => (
-                <li className="nav-item w-100" key={section.id}>
-                  <a
-                    href={`#${section.id}`}
-                    onClick={e => {
-                      e.preventDefault();
-                      handleSectionClick(section.id);
-                      // Close the menu on mobile after click
-                      const menu = document.getElementById('sectionMenuCollapse');
-                      if (menu && window.innerWidth < 992) {
-                        menu.classList.remove('show');
-                      }
-                    }}
-                    className={`nav-link d-flex align-items-center px-3 py-2${openSection === section.id ? ' active fw-bold' : ''}`}
-                    style={{
-                      minWidth: 0,
-                      marginLeft: 50,
-                      color: sectionColors[section.id],
-                      fontWeight: openSection === section.id ? 'bold' : undefined,
-                    }}
-                  >
-                    <span className="flex-grow-1 text-end me-3" style={{ color: sectionColors[section.id] }}>{section.label}</span>
-                    <i className={`fas ${section.icon} mb-0 fs-5`} style={{ color: sectionColors[section.id] }} />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </nav>
-    );
-  }
+  // Mobile menu: close on Escape, on a tap outside, or when the screen becomes wide.
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    const onPointer = (e: PointerEvent) => {
+      if (!navRef.current?.contains(e.target as Node)) setMenuOpen(false);
+    };
+    const wide = window.matchMedia("(min-width: 769px)");
+    const onWide = () => wide.matches && setMenuOpen(false);
+    document.addEventListener("keydown", onKey);
+    document.addEventListener("pointerdown", onPointer);
+    wide.addEventListener("change", onWide);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("pointerdown", onPointer);
+      wide.removeEventListener("change", onWide);
+    };
+  }, [menuOpen]);
 
-  // Desktop: Top horizontal menu (not floating sidebar)
+  // Keep the active link visible when the menu scrolls horizontally.
+  useEffect(() => {
+    const box = linksRef.current;
+    const link = active ? box?.querySelector<HTMLElement>(`[data-section="${active}"]`) : null;
+    if (!box || !link) return;
+    const left = link.offsetLeft;
+    const right = left + link.offsetWidth;
+    if (left < box.scrollLeft || right > box.scrollLeft + box.clientWidth) {
+      box.scrollTo({ left: left - (box.clientWidth - link.offsetWidth) / 2, behavior: "smooth" });
+    }
+  }, [active]);
+
+  const go = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    lastClicked.current = id;
+    setMenuOpen(false);
+    if (openSection(id)) {
+      history.replaceState(null, "", `#${id}`);
+      setActive(id);
+    }
+  };
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm border-bottom section-menu-bar">
-      <div className="container-fluid">
-        <a className="navbar-brand d-flex align-items-center" href="#" style={{ minWidth: 120 }}>
-          <img src={logoUnivGuelma} alt="University of Guelma Logo" style={{ height: 40, marginRight: 8 }} />
+    <nav ref={navRef} className="site-nav" aria-label="CV sections">
+      <div className="site-nav__inner">
+        <a
+          className="site-nav__brand"
+          href="#top"
+          onClick={(e) => {
+            e.preventDefault();
+            lastClicked.current = null;
+            history.replaceState(null, "", location.pathname + location.search);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          aria-label="Back to top"
+        >
+          <img src={logoUnivGuelma} alt="University of Guelma Logo" />
         </a>
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0 flex-row flex-wrap w-100 justify-content-center">
-          {sections.map(section => (
-            <li className="nav-item mx-1" key={section.id}>
-              <a
-                href={`#${section.id}`}
-                onClick={e => {
-                  e.preventDefault();
-                  handleSectionClick(section.id);
-                }}
-                className={`nav-link d-flex flex-column align-items-center${openSection === section.id ? ' active fw-bold' : ''}`}
-                style={{
-                  minWidth: 80,
-                  color: sectionColors[section.id],
-                  fontWeight: openSection === section.id ? 'bold' : undefined,
-                }}
-              >
-                <i className={`fas ${section.icon} fs-4 mb-1`} style={{ color: sectionColors[section.id] }} />
-                <span className="small" style={{ color: sectionColors[section.id] }}>{section.label}</span>
-              </a>
-            </li>
+        <span className="site-nav__current" aria-hidden="true">
+          {sections.find((s) => s.id === active)?.label ?? "Curriculum Vitae"}
+        </span>
+        <div id="site-nav-links" className={`site-nav__links${menuOpen ? " is-open" : ""}`} ref={linksRef}>
+          {sections.map((s) => (
+            <a
+              key={s.id}
+              href={`#${s.id}`}
+              data-section={s.id}
+              className="site-nav__link"
+              aria-current={active === s.id ? "location" : undefined}
+              onClick={(e) => go(e, s.id)}
+            >
+              {s.label}
+            </a>
           ))}
-        </ul>
+        </div>
+        <button
+          type="button"
+          className="icon-btn site-nav__menu-btn"
+          aria-expanded={menuOpen}
+          aria-controls="site-nav-links"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          onClick={() => setMenuOpen((v) => !v)}
+        >
+          <i className={`fas ${menuOpen ? "fa-xmark" : "fa-bars"}`} aria-hidden="true" />
+        </button>
       </div>
     </nav>
   );

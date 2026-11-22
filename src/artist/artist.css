@@ -1,0 +1,769 @@
+/* =========================================================================
+   Artist CV — reproduces cv-source/artist-cv-rochdi-boudjehem.pdf
+   All sizes inside a sheet are in em of the sheet's font-size, so the same
+   layout renders on screen (15px base ≈ PDF at 909px wide) and in print
+   (9.82pt base → exactly A4).
+   ========================================================================= */
+:root {
+  /* PDF palette */
+  --bg: #FAF6EE;
+  --sidebar: #1D2326;
+  --sidebar-2: #2A3236;
+  --gold: #B08A3E;
+  --rule: #E3D8C2;
+  --text: #1D2326;
+
+  /* Derived */
+  --gold-ink: color-mix(in srgb, var(--gold) 75%, #000); /* small gold text on cream (AA 4.5:1) */
+  --rule-strong: color-mix(in srgb, var(--rule) 70%, var(--gold));
+  --muted: #6B6A66;
+  --card: #FFFFFF;
+  --card-shadow: 0 0.15em 0.6em rgb(29 35 38 / 0.10), 0 0.05em 0.15em rgb(29 35 38 / 0.06);
+  --side-text: #EDE7DA;
+  --side-muted: #9BA3A6;
+  --side-frame: #5A6266;
+  --side-gold: var(--gold);
+  --side-edge: transparent;
+  --backdrop: color-mix(in srgb, var(--bg) 90%, var(--sidebar));
+
+  /* Fonts */
+  --font-name: "Aref Ruqaa", "Amiri", serif;
+  --font-title: "Reem Kufi", "Noto Naskh Arabic Variable", sans-serif;
+  --font-body: "Noto Naskh Arabic Variable", "Noto Naskh Arabic", "Amiri", serif;
+  --font-quote: "Amiri", "Noto Naskh Arabic Variable", serif;
+
+  color-scheme: light;
+}
+
+/* Dark variant: charcoal background, cream text, same gold accent */
+[data-theme="dark"] {
+  --bg: #1D2326;
+  --sidebar: #2F393D;   /* lighter slate, clearly separate from the charcoal page */
+  --sidebar-2: #3B474C;
+  --side-text: #F1EADB;
+  --side-muted: #B4BCBF;
+  --side-gold: color-mix(in srgb, var(--gold) 78%, #fff); /* AA on the slate sidebar */
+  --side-edge: color-mix(in srgb, var(--gold) 45%, transparent);
+  --text: #EFE7D6;
+  --gold-ink: var(--gold);
+  --rule: #3A4348;
+  --rule-strong: color-mix(in srgb, var(--rule) 60%, var(--gold));
+  --muted: #B3AC9E;
+  --card: #2A3236;
+  --card-shadow: 0 0.15em 0.6em rgb(0 0 0 / 0.45);
+  --side-frame: #5C686E;
+  --backdrop: #111517;
+  color-scheme: dark;
+}
+
+/* ----- Base ----- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 24px 16px 48px;
+  background: var(--backdrop);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, p, ol, ul, dl, dd, figure, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Links to the academic CV: discreet, keep the PDF look */
+.xlink {
+  color: inherit;
+  text-decoration: underline dotted;
+  text-decoration-color: color-mix(in srgb, var(--gold) 70%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.35em;
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+
+.xlink:hover {
+  color: var(--gold-ink);
+  text-decoration-style: solid;
+  text-decoration-color: var(--gold);
+}
+
+.sidebar .xlink:hover {
+  color: var(--side-gold);
+}
+
+/* ----- Theme toggle (screen only) ----- */
+.artist-toolbar {
+  position: fixed;
+  top: 12px;
+  inset-inline-end: 12px;
+  z-index: 20;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--rule-strong);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold-ink);
+}
+
+/* ----- Sheets (one per PDF page) ----- */
+.sheet {
+  font-size: 15px;
+  width: 100%;
+  max-width: 60.6em;               /* 595pt A4 width at this scale */
+  margin: 0 auto 24px;
+  background: var(--bg);
+  box-shadow: 0 2px 18px rgb(0 0 0 / 0.12);
+  line-height: 1.8;
+}
+
+/* =========================================================================
+   Page 1
+   ========================================================================= */
+.sheet--one {
+  display: grid;
+  grid-template-columns: 19.6em minmax(0, 1fr); /* RTL: first column (sidebar) is on the right */
+  min-height: 85.7em;                           /* A4 proportion */
+}
+
+/* ----- Sidebar ----- */
+.sidebar {
+  background: var(--sidebar);
+  color: var(--side-text);
+  border-inline-end: 1px solid var(--side-edge);
+  padding: 4.6em 2.6em 3em;
+}
+
+.photo-frame {
+  width: 12.7em;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0.45em;
+  border: 1px solid var(--gold);
+}
+
+.photo-frame img {
+  width: 100%;
+  aspect-ratio: 176 / 218;
+  object-fit: cover;
+}
+
+.view-switch {
+  display: flex;
+  width: fit-content;
+  margin: 1.1em auto 0;
+  padding: 3px;
+  gap: 2px;
+  border: 1px solid var(--side-frame);
+  border-radius: 8px;
+  font-family: var(--font-title);
+  font-size: 0.8em;
+  line-height: 1.6;
+}
+
+.view-switch__btn {
+  padding: 0.2em 0.75em;
+  border-radius: 6px;
+  color: var(--side-muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.view-switch__btn:hover {
+  color: var(--side-text);
+}
+
+.view-switch__btn[aria-current="page"] {
+  background: var(--sidebar-2);
+  color: var(--side-gold);
+}
+
+.side-block {
+  margin-top: 3em;
+}
+
+.side-title {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.13em;
+  color: var(--side-gold);
+  margin-bottom: 1em;
+}
+
+.facts {
+  display: grid;
+  gap: 0.6em;
+}
+
+.facts dt {
+  font-size: 0.9em;
+  color: var(--side-muted);
+  line-height: 1.5;
+}
+
+.facts dd {
+  font-size: 0.98em;
+  line-height: 1.6;
+}
+
+.facts a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.facts a:hover {
+  color: var(--gold);
+}
+
+.diamonds {
+  display: grid;
+  gap: 0.15em;
+  font-size: 0.98em;
+}
+
+.diamonds li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55em;
+}
+
+.diamonds li::before {
+  content: "◆";
+  color: var(--side-gold);
+  font-size: 0.6em;
+  transform: translateY(-0.25em);
+}
+
+/* ----- Main column ----- */
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 5em 3.9em 2.6em 4em;
+}
+
+.hero {
+  text-align: start;
+}
+
+.hero__name {
+  font-family: var(--font-name);
+  font-weight: 700;
+  font-size: 4em;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.hero__subtitle {
+  margin-top: 0.35em;
+  font-family: var(--font-title);
+  font-size: 1.27em;
+  color: var(--gold-ink);
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.9em;
+  margin: 1.4em 0 0;
+  color: var(--gold);
+  font-size: 0.9em;
+  line-height: 1;
+}
+
+.ornament::before,
+.ornament::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule-strong);
+}
+
+.block {
+  margin-top: 2.3em;
+}
+
+.sec-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.7em;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.4em;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+/* Gold ◆ marker, drawn in CSS so it has the PDF's size whatever fonts are installed */
+.sec-title__mark {
+  flex-shrink: 0;
+  width: 0.5em;
+  height: 0.5em;
+  margin-inline: 0.12em 0.1em;
+  background: var(--gold);
+  transform: rotate(45deg);
+  font-size: inherit;
+  color: transparent;
+  overflow: hidden;
+}
+
+.prose {
+  font-size: 1.05em;
+  line-height: 1.85;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.prose + .prose {
+  margin-top: 0.55em;
+}
+
+.prose strong {
+  font-weight: 700;
+}
+
+/* Education timeline: gold circles on a vertical rule (right side) */
+.edu {
+  position: relative;
+  display: grid;
+  gap: 1.2em;
+  margin-inline-start: 0.6em;
+  padding-inline-start: 2em;
+}
+
+.edu::before {
+  content: "";
+  position: absolute;
+  inset-block: 0.9em 0.3em;
+  inset-inline-start: 0;
+  width: 2px;
+  background: var(--rule);
+}
+
+.edu__item {
+  position: relative;
+}
+
+.edu__item::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: calc(-2em - 0.42em + 1px);
+  top: 0.55em;
+  width: 0.84em;
+  height: 0.84em;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  background: var(--bg);
+}
+
+.edu__title {
+  font-family: var(--font-quote);
+  font-weight: 700;
+  font-size: 1.24em;
+  line-height: 1.5;
+}
+
+.edu__year {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 0.85em;
+  color: var(--gold-ink);
+  margin-inline-end: 0.55em;
+}
+
+.edu__place {
+  font-size: 0.98em;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Graphic design: text (right) + two posters (left) */
+.design {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.1em;
+  align-items: start;
+}
+
+.design .prose {
+  line-height: 1.75;
+  font-size: 0.98em;
+}
+
+.gallery--posters {
+  display: flex;
+  gap: 1.1em;
+}
+
+.gallery--posters .artwork__frame {
+  width: 7.8em;
+  padding: 0;
+  border: 2px solid #fff;
+  box-shadow: var(--card-shadow);
+}
+
+.gallery--posters img {
+  width: 100%;
+  aspect-ratio: 700 / 1468;
+  object-fit: cover;
+}
+
+.quote {
+  margin-top: auto;
+  padding-top: 1.6em;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  font-family: var(--font-quote);
+  font-size: 1.28em;
+  color: var(--muted);
+}
+
+/* =========================================================================
+   Page 2
+   ========================================================================= */
+.sheet--two {
+  display: flex;
+  flex-direction: column;
+  min-height: 85.7em;
+  padding: 4.4em 4.3em 2.6em;
+}
+
+.p2-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1em;
+  padding-bottom: 0.7em;
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.p2-head__title {
+  font-family: var(--font-name);
+  font-weight: 700;
+  font-size: 2.8em;
+  line-height: 1.2;
+}
+
+.p2-head__subtitle {
+  font-family: var(--font-title);
+  font-size: 1.1em;
+  color: var(--gold-ink);
+  padding-bottom: 0.4em;
+}
+
+.p2-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1.03fr) minmax(0, 1fr);
+  gap: 2.8em;
+  margin-top: 1.9em;
+}
+
+.p2-bio .prose {
+  line-height: 1.98;
+  font-size: 1.08em;
+}
+
+.p2-bio .prose + .prose {
+  margin-top: 0.7em;
+}
+
+.exh {
+  display: grid;
+  gap: 1.1em;
+  margin-top: 0.4em;
+}
+
+.exh__item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.85em;
+  align-items: start;
+}
+
+.exh__year {
+  display: inline-block;
+  min-width: 3.7em;
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  background: var(--sidebar);
+  color: var(--side-gold);
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.02em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.exh__title {
+  font-family: var(--font-quote);
+  font-weight: 700;
+  font-size: 1.2em;
+  line-height: 1.55;
+}
+
+.exh__place {
+  font-size: 1em;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* Calligraphy: three white cards with captions underneath */
+.gallery--cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8em;
+  margin-top: 2.1em;
+}
+
+.artwork {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.artwork__frame {
+  display: block;
+  font: inherit;
+  color: inherit;
+  cursor: zoom-in;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+.gallery--cards .artwork__frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 243 / 400;
+  padding: 0.9em;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  box-shadow: var(--card-shadow);
+}
+
+.gallery--cards .artwork__frame img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.artwork__frame:hover img {
+  opacity: 0.92;
+}
+
+.artwork__caption {
+  display: grid;
+  margin-top: 1.1em;
+  text-align: center;
+}
+
+.artwork__title {
+  font-family: var(--font-quote);
+  font-size: 1.06em;
+  line-height: 1.6;
+}
+
+.artwork__style {
+  font-size: 0.95em;
+  color: var(--muted);
+}
+
+.artwork__note {
+  font-size: 0.73em;
+  color: var(--muted);
+  margin-top: 0.2em;
+}
+
+.p2-foot {
+  margin-top: auto;
+  padding-top: 2.2em;
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 0.87em;
+  color: var(--muted);
+}
+
+/* ----- Lightbox (yet-another-react-lightbox) ----- */
+.artist-lightbox .yarl__slide_title {
+  font-family: var(--font-quote);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.artist-lightbox .yarl__slide_description {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  white-space: pre-line;
+}
+
+/* =========================================================================
+   Responsive: on phones the sidebar moves above the main column
+   ========================================================================= */
+@media screen and (max-width: 760px) {
+  body {
+    padding: 0;
+  }
+
+  .sheet {
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .sheet--one {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .sidebar {
+    padding: 3.6em 1.6em 2.2em;
+  }
+
+  .main {
+    padding: 2.2em 1.25em 2em;
+  }
+
+  .hero__name {
+    font-size: 2.7em;
+  }
+
+  .design {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery--posters {
+    justify-content: center;
+  }
+
+  .gallery--posters .artwork__frame {
+    width: min(9.5em, 42vw);
+  }
+
+  .quote {
+    margin-top: 2.4em;
+  }
+
+  .sheet--two {
+    min-height: 0;
+    padding: 2.4em 1.25em 2em;
+    border-top: 1px solid var(--rule);
+  }
+
+  .p2-head {
+    flex-wrap: wrap;
+  }
+
+  .p2-cols {
+    grid-template-columns: 1fr;
+    gap: 2.2em;
+  }
+
+  .gallery--cards {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15em), 1fr));
+  }
+}
+
+/* =========================================================================
+   Print: two A4 pages like the PDF (light palette)
+   ========================================================================= */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  :root,
+  [data-theme="dark"] {
+    --bg: #FAF6EE;
+    --sidebar: #1D2326;
+    --sidebar-2: #2A3236;
+    --text: #1D2326;
+    --gold-ink: color-mix(in srgb, var(--gold) 75%, #000);
+    --rule: #E3D8C2;
+    --rule-strong: color-mix(in srgb, var(--rule) 70%, var(--gold));
+    --muted: #6B6A66;
+    --card: #FFFFFF;
+    --card-shadow: 0 0.15em 0.6em rgb(29 35 38 / 0.10), 0 0.05em 0.15em rgb(29 35 38 / 0.06);
+    --side-frame: #5A6266;
+    --side-text: #EDE7DA;
+    --side-muted: #9BA3A6;
+    --side-gold: var(--gold);
+    --side-edge: transparent;
+    color-scheme: light;
+  }
+
+  html,
+  body {
+    background: var(--bg);
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .artist-toolbar,
+  .view-switch,
+  .yarl__root {
+    display: none !important;
+  }
+
+  .xlink {
+    text-decoration: none;
+  }
+
+  .sheet {
+    font-size: 9.82pt;
+    width: 210mm;
+    max-width: none;
+    height: 297mm;
+    min-height: 0;
+    margin: 0;
+    box-shadow: none;
+    overflow: hidden;
+    break-after: page;
+  }
+
+  .sheet:last-of-type {
+    break-after: auto;
+  }
+}

@@ -633,14 +633,14 @@ export const cvData = {
     }
   ],
   languages: [
-    "Arabic (native)", "French (B2, TCF)", "English (fluent)", "Spanish (beginner)"
+    "Arabic (native)", "French (fluent)", "English (fluent)"
   ],
   certificates: [
     "TCF Certificate (Test of French Knowledge), Level B2, French Cultural Center – Annaba (2006)"
   ],
   other: [
     "President and founder of the 'Future Generations' youth Scientific and Technical Association in Guelma",
-    "Typing Speed: 53 WPM (TypingMaster Pro)",
-    "Arabic calligraphy and Plastic Arts: Naskh and Thuluth (Aquarelle)"
-  ]
+    // Links to the calligraphy section of the Arabic artist CV
+    { text: "Arabic calligraphy and Plastic Arts: Naskh and Thuluth (Aquarelle)", href: "/artist/#artist" },
+  ] as (string | { text: string; href: string })[]
 };

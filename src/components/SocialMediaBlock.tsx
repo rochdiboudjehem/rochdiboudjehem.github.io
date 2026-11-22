@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface SocialMediaBlockProps {
   social: {
     telegram?: string;
@@ -13,65 +11,37 @@ interface SocialMediaBlockProps {
     discord?: string;
     reddit?: string;
   };
-  mode?: 'row';
 }
 
-const SocialMediaBlock: React.FC<SocialMediaBlockProps> = ({ social, mode }) => {
-  const socialIcons = {
-    telegram: 'fa-telegram',
-    linkedin: 'fa-linkedin',
-    facebook: 'fa-facebook',
-    twitter: 'fa-twitter',
-    youtube: 'fa-youtube',
-    instagram: 'fa-instagram',
-    tiktok: 'fa-tiktok',
-    github: 'fa-github',
-    discord: 'fa-discord',
-    reddit: 'fa-reddit',
-  };
-
-  const socialColors: Record<string, string> = {
-    telegram: '#229ED9',
-    linkedin: '#0077b5',
-    facebook: '#1877f3',
-    twitter: '#1da1f2',
-    youtube: '#ff0000',
-    instagram: '#e4405f',
-    tiktok: '#010101',
-    github: '#333',
-  discord: '#5662f6',
-    reddit: '#ff4500',
-  };
-
-  return (
-    <div
-      className={
-        mode === 'row'
-                  ? 'd-flex flex-row gap-2 pl-5 rounded align-items-center justify-content-center w-100'
-          : 'position-fixed end-0 top-50 translate-middle-y d-flex flex-column gap-2 bg-light p-2 rounded shadow border border-primary min-vw-38 align-items-center'
-      }
-      style={mode === 'row' ? { zIndex: 1 } : { zIndex: 1 }}
-    >
-      {Object.entries(social)
-        .filter(([_, value]) => value)
-        .map(([platform, url]) => (
-          <a
-            key={platform}
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            title={platform.charAt(0).toUpperCase() + platform.slice(1)}
-            className="fs-5 d-flex align-items-center text-decoration-none py-1"
-            style={{ transition: 'color 0.2s' }}
-          >
-            <i
-              className={`fab ${socialIcons[platform as keyof typeof socialIcons]}`}
-              style={{ color: socialColors[platform] || '#1976d2' }}
-            />
-          </a>
-        ))}
-    </div>
-  );
+const socialIcons: Record<string, string> = {
+  telegram: 'fa-telegram',
+  linkedin: 'fa-linkedin',
+  facebook: 'fa-facebook',
+  twitter: 'fa-twitter',
+  youtube: 'fa-youtube',
+  instagram: 'fa-instagram',
+  tiktok: 'fa-tiktok',
+  github: 'fa-github',
+  discord: 'fa-discord',
+  reddit: 'fa-reddit',
 };
+
+/** Row of social network icons (monochrome, accent on hover). */
+const SocialMediaBlock: React.FC<SocialMediaBlockProps> = ({ social }) => (
+  <ul className="icon-links icon-links--small" aria-label="Social media">
+    {Object.entries(social)
+      .filter(([, url]) => url)
+      .map(([platform, url]) => {
+        const label = platform.charAt(0).toUpperCase() + platform.slice(1);
+        return (
+          <li key={platform}>
+            <a href={url} target="_blank" rel="noopener noreferrer" title={label} aria-label={label}>
+              <i className={`fab ${socialIcons[platform]}`} aria-hidden="true" />
+            </a>
+          </li>
+        );
+      })}
+  </ul>
+);
 
 export default SocialMediaBlock;

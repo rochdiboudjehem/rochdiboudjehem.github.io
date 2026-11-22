@@ -1,43 +1,25 @@
 import type { ReactNode } from "react";
-import { useState } from "react";
 
 interface CVSectionProps {
-  id?: string;
-  title: ReactNode;
+  id: string;
+  icon: string;
+  title: string;
   children: ReactNode;
-  defaultOpen?: boolean;
-  isOpen?: boolean;
-  onToggle?: (id: string) => void;
 }
 
-const CVSection: React.FC<CVSectionProps> = ({ 
-  id, 
-  title, 
-  children, 
-  defaultOpen = false,
-  isOpen,
-  onToggle 
-}) => {
-  const [localOpen, setLocalOpen] = useState(defaultOpen);
-  const isExpanded = isOpen ?? localOpen;
-
-  const handleClick = () => {
-    if (onToggle && id) {
-      onToggle(id);
-    } else {
-      setLocalOpen(v => !v);
-    }
-  };
-
-  return (
-    <div id={id} className="cv-section">
-      <div className="section-header" onClick={handleClick}>
-        <span style={{ marginRight: 8 }}>{isExpanded ? "▼" : "►"}</span>
-        {title}
-      </div>
-      {isExpanded && <div className="section-content">{children}</div>}
-    </div>
-  );
-};
+/**
+ * Collapsible CV section built on native <details>/<summary>.
+ * The content is always present in the HTML (indexable), only visually collapsed.
+ */
+const CVSection: React.FC<CVSectionProps> = ({ id, icon, title, children }) => (
+  <details id={id} className="cv-section">
+    <summary>
+      <i className={`fas ${icon} cv-section__icon`} aria-hidden="true" />
+      <h2 className="cv-section__title">{title}</h2>
+      <i className="fas fa-chevron-right chevron" aria-hidden="true" />
+    </summary>
+    <div className="cv-section__body">{children}</div>
+  </details>
+);
 
 export default CVSection;

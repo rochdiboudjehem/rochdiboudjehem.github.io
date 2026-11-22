@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 interface ConferenceItemProps {
   year: string;
   authors: string;
@@ -11,58 +9,44 @@ interface ConferenceItemProps {
 }
 
 const ConferenceItem: React.FC<ConferenceItemProps> = ({ year, authors, title, event, place, link, participation }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const eventNode = link ? (
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      {event}
+    </a>
+  ) : (
+    event
+  );
 
   return (
-    <li style={{ marginBottom: '12px' }}>
-      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-        <i className="fas fa-chalkboard-teacher icon" />
-        <div style={{ flex: 1 }}>
-          {authors && `${authors} (${year}). `}{!authors && `${year}. `}{title}{title && '. '}{' '}
-          {link ? (
-            <a href={link} target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'underline', fontStyle: 'italic' }}>
-              {event}
-            </a>
-          ) : (
-            <span style={{ fontStyle: 'italic' }}>{event}</span>
-          )}
-          {place && `, ${place}`}
-          
-          {participation && participation.length > 0 && (
-            <button 
-              onClick={() => setIsExpanded(!isExpanded)}
-              style={{ 
-                background: 'none',
-                border: 'none',
-                padding: '4px 8px',
-                cursor: 'pointer',
-                color: '#666',
-                marginLeft: '8px'
-              }}
-            >
-              <i style={{ color: 'red' }} className={`fas fa-chevron-${isExpanded ? 'up' : 'down'}`} />
-            </button>
-          )}
-        </div>
+    <li>
+      <div className="tl-date">{year}</div>
+      <div>
+        {title ? (
+          <>
+            <h3 className="tl-title">{title}</h3>
+            {authors && <p className="tl-meta">{authors}</p>}
+            <p className="tl-meta">
+              <em>{eventNode}</em>
+              {place && <> · {place}</>}
+            </p>
+          </>
+        ) : (
+          <>
+            <h3 className="tl-title">{eventNode}</h3>
+            {authors && <p className="tl-meta">{authors}</p>}
+            {place && <p className="tl-meta">{place}</p>}
+          </>
+        )}
+        {participation && participation.length > 0 && (
+          <ul className="chips chips--roles" aria-label="Participation">
+            {participation.map((role, i) => (
+              <li key={i} className="chip">
+                {role}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
-      
-      {isExpanded && participation && (
-        <ul style={{ 
-          marginTop: '8px',
-          marginBottom: '8px',
-          marginLeft: '32px',
-          paddingLeft: '16px',
-          borderLeft: '2px solid #e0e0e0',
-          listStyle: 'none'
-        }}>
-          {participation.map((item, index) => (
-            <li key={index} style={{ marginBottom: '4px', color: '#666' }}>
-              <i className="fas fa-caret-right" style={{ marginRight: '8px' }} />
-              {item}
-            </li>
-          ))}
-        </ul>
-      )}
     </li>
   );
 };
