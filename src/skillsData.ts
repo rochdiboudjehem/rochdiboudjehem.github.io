@@ -9,7 +9,7 @@ export const skillGroups: SkillGroup[] = [
     items: [
       { name: "Java", icon: "fab fa-java" },
       { name: "C", icon: "fas fa-c" },
-      { name: "Python (basic)", icon: "fab fa-python" },
+      { name: "Python", icon: "fab fa-python" },
       { name: "JavaScript", icon: "fab fa-js-square" },
       { name: "PHP", icon: "fab fa-php" },
       { name: "TypeScript", icon: "fas fa-code" },
@@ -18,7 +18,7 @@ export const skillGroups: SkillGroup[] = [
       { name: "Prolog", icon: "fas fa-brain" },
       { name: "Pascal", icon: "fas fa-code" },
       { name: "Delphi", icon: "fas fa-code" },
-      { name: "Fortran (basic)", icon: "fas fa-square-root-alt" },
+      { name: "Fortran", icon: "fas fa-square-root-alt" },
     ],
   },
   {
@@ -50,13 +50,13 @@ export const skillGroups: SkillGroup[] = [
       { name: "HTML5", icon: "fab fa-html5" },
       { name: "CSS3", icon: "fab fa-css3-alt" },
       { name: "JavaScript", icon: "fab fa-js-square" },
-      { name: "React (basic)", icon: "fab fa-react" },
+      { name: "React", icon: "fab fa-react" },
       { name: "Vue.js", icon: "fab fa-vuejs" },
       { name: "Node.js", icon: "fab fa-node-js" },
       { name: "Bootstrap", icon: "fab fa-bootstrap" },
       { name: "jQuery", icon: "fas fa-dollar-sign" },
       { name: "JSP", icon: "fab fa-java" },
-      { name: "ASP (classic)", icon: "fab fa-microsoft" },
+      { name: "Classic ASP", icon: "fab fa-microsoft" },
     ],
   },
   {
@@ -74,7 +74,7 @@ export const skillGroups: SkillGroup[] = [
     icon: "fas fa-sitemap",
     items: [
       { name: "Merise", icon: "fas fa-project-diagram" },
-      { name: "UML (use case and flow diagrams)", icon: "fas fa-diagram-project" },
+      { name: "UML", icon: "fas fa-diagram-project" },
     ],
   },
   {
@@ -84,8 +84,8 @@ export const skillGroups: SkillGroup[] = [
       { name: "jQuery", icon: "fas fa-dollar-sign" },
       { name: "Bootstrap", icon: "fab fa-bootstrap" },
       { name: "Express.js", icon: "fas fa-shipping-fast" },
-      { name: "React (basic)", icon: "fab fa-react" },
-      { name: "Angular (basic)", icon: "fab fa-angular" },
+      { name: "React", icon: "fab fa-react" },
+      { name: "Angular", icon: "fab fa-angular" },
       { name: "Java RMI", icon: "fab fa-java" },
       { name: "Pandas", icon: "fas fa-paw" },
       { name: "NumPy", icon: "fas fa-calculator" },
@@ -173,7 +173,7 @@ export const skillGroups: SkillGroup[] = [
     icon: "fas fa-desktop",
     items: [
       { name: "Windows", icon: "fab fa-windows" },
-      { name: "Linux (Ubuntu, CentOS)", icon: "fab fa-linux" },
+      { name: "Linux", icon: "fab fa-linux" },
       { name: "macOS", icon: "fab fa-apple" },
     ],
   },

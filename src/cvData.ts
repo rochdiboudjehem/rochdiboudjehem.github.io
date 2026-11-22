@@ -373,7 +373,7 @@ export const cvData = {
   },
   publications: [
     {
-      type: "Web of Science & Scopus",
+      type: "Web of Science",
       items: [
         {
           authors: "Bendjebar, S., Lafifi, Y., Boudjehem, R., & Laouissi, A.",
