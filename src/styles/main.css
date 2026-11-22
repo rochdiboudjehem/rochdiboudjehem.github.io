@@ -270,7 +270,7 @@ a:hover {
 /* ----- Profile header ----- */
 .profile {
   display: grid;
-  grid-template-columns: 160px minmax(0, 1fr);
+  grid-template-columns: minmax(160px, max-content) minmax(0, 1fr);
   gap: var(--space-6);
   padding: var(--space-6);
   align-items: start;
@@ -300,6 +300,16 @@ a:hover {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface-2);
+}
+
+/* Next to the photo (wide screens): one button per line, photo width */
+.profile__aside .view-switch {
+  flex-direction: column;
+  width: 160px;
+}
+
+.profile__aside .view-switch__btn {
+  text-align: center;
 }
 
 .view-switch__btn {
@@ -796,6 +806,11 @@ details[open] > .more__body {
   }
 
   /* Stacked header */
+  .profile__aside .view-switch {
+    flex-direction: row;
+    width: auto;
+  }
+
   .profile {
     grid-template-columns: 1fr;
     justify-items: center;
