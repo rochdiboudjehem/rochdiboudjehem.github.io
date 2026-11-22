@@ -1,47 +1,19 @@
 import React from 'react';
+import { cvData } from '../cvData';
 
+const links = cvData.academicAccounts;
+
+// URLs come from cvData.academicAccounts (single source of truth).
 const academicAccounts = [
-  {
-    label: 'Web of Science',
-    url: 'https://www.webofscience.com/wos/author/record/ABC-4157-2021',
-    iconClass: 'ai ai-clarivate',
-  },
-  {
-    label: 'Scopus',
-    url: 'http://scopus.com/authid/detail.uri?authorId=57468903100',
-    iconClass: 'ai ai-scopus',
-  },
-  {
-    label: 'Google Scholar',
-    url: 'https://scholar.google.com/citations?user=CXoCLWIAAAAJ&hl=en',
-    iconClass: 'ai ai-google-scholar-square',
-  },
-  {
-    label: 'ORCID',
-    url: 'https://orcid.org/0000-0002-9998-4833',
-    iconClass: 'ai ai-orcid',
-  },
-  {
-    label: 'ResearchGate',
-    url: 'https://www.researchgate.net/profile/Rochdi-Boudjehem',
-    iconClass: 'ai ai-researchgate-square',
-  },
-  {
-    label: 'Semantic Scholar',
-    url: 'https://www.semanticscholar.org/author/Rochdi-Boudjehem/2110328372',
-    iconClass: 'ai ai-semantic-scholar',
-  },
-  {
-    label: 'Academia.edu',
-    url: 'https://guelma.academia.edu/RochdiBoudjehem',
-    iconClass: 'ai ai-academia',
-  },
-  {
-    label: 'DBLP',
-    url: 'https://dblp.org/pid/123/4567.html', // Replace with actual DBLP link if available
-    iconClass: 'ai ai-dblp',
-  },
-];
+  { label: 'Web of Science', url: links.webOfScience, iconClass: 'ai ai-clarivate' },
+  { label: 'Scopus', url: links.scopus, iconClass: 'ai ai-scopus' },
+  { label: 'Google Scholar', url: links.googleScholar, iconClass: 'ai ai-google-scholar-square' },
+  { label: 'ORCID', url: links.orcid, iconClass: 'ai ai-orcid' },
+  { label: 'ResearchGate', url: links.researchGate, iconClass: 'ai ai-researchgate-square' },
+  { label: 'Semantic Scholar', url: links.semanticScholar, iconClass: 'ai ai-semantic-scholar' },
+  { label: 'Academia.edu', url: links.academia, iconClass: 'ai ai-academia' },
+  { label: 'DBLP', url: links.dblp, iconClass: 'ai ai-dblp' },
+].filter(acc => acc.url);
 
 const academicColors: Record<string, string> = {
   'Web of Science': '#e6b800', // Clarivate yellow

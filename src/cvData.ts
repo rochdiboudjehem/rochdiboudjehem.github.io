@@ -71,7 +71,15 @@ export const cvData = {
   ],
     experience: [
         {
-            period: "2024-Present",
+            period: "2025-Present",
+            elapsedTime: "",
+            title: "Associate Professor",
+            place: "Univ. Guelma",
+            placeDetails: "University of 8 May 1945 Guelma, Algeria",
+            details: []
+        },
+        {
+            period: "2024-2025",
             elapsedTime: "",
             title: "Assistant Professor",
             place: "Univ. Guelma",
@@ -368,14 +376,27 @@ export const cvData = {
       type: "Web of Science & Scopus",
       items: [
         {
+          authors: "Bendjebar, S., Lafifi, Y., Boudjehem, R., & Laouissi, A.",
+          year: "2026",
+          title: "Data-Driven Insights into E-Learning: A Comprehensive Review of Eye-Tracking Applications in Learning Systems",
+          journal: "Journal of Eye Movement Research",
+          link: "https://doi.org/10.3390/jemr19020041",
+          volume: "19",
+          issue: "2",
+          pages: "Article 41",
+          abstract: [
+            "In the last few years, universities have increasingly implemented online learning environments, allowing students to study at their own pace. These environments utilize technological tools and implement methods to support training, deliver content, and promote the acquisition of new knowledge and skills. As an example of these technologies, eye tracking has emerged as a powerful tool for studying visual attention, cognitive processes, and learning behaviors. The main aim of this study is to provide a scoping review of recent eye-tracking research across diverse learner populations, ranging from K-12 students to university-level learners and educators. The present study examined recent advances in eye-tracking technologies, focusing on their potential, especially when combined with artificial intelligence (AI) techniques such as machine learning. It analyzed 54 empirical studies in the last few years, highlighting their applicability, strengths, and limitations. The research findings highlight the promise of eye-tracking technology to transform educational practices by providing data-driven insights regarding student behavior and cognitive processes. Future research must address implementation and data-analysis challenges to maximize the educational benefits of eye tracking."
+          ]
+        },
+        {
           authors: "Boudjehem, R., & Lafifi, Y.",
           year: "2024",
-          title: "An early warning system to predict dropouts inside e-learning environments.",
+          title: "An early warning system to predict dropouts inside e-learning environments",
           journal: "Education and Information Technologies",
           link: "https://doi.org/10.1007/s10639-024-12498-1",
           volume: "29",
-          issue: "1",
-          pages: "123-145",
+          issue: "13",
+          pages: "16365-16385",
           abstract: [
             "Teaching Institutions could benefit from Early Warning Systems to identify at-risk students before learning difficulties affect the quality of their acquired knowledge. An Early Warning System can help preemptively identify learners at risk of dropping out by monitoring them and analyzing their traces to promptly react to them so they can continue their learning in the best conditions. This paper presents a novel method for predicting at-risk learners based on their performance-based behavior in e-learning environments. The proposed approach can identify and predict learners with difficulties and intervene autonomously to assist them in overcoming them. A novel algorithm is developed to forecast learners who are prone to struggle or drop out. We experimented in a learning environment at a higher education institution that used the proposed strategy to examine its effectiveness, and the findings supported the proposed approach’s efficacy."
           ]
@@ -384,13 +405,13 @@ export const cvData = {
         },
         {
           authors: "Abda, Y., Mehenaoui, Z., Lafifi, Y., & Boudjehem, R.",
-          year: "2023",
-          title: "A new approach for assessing the quality of online courses.",
+          year: "2024",
+          title: "A new approach for assessing the quality of online courses",
           journal: "Education and Information Technologies",
           link: "https://doi.org/10.1007/s10639-023-12247-w",
-          volume: "28",
-          issue: "4",
-          pages: "456-478",
+          volume: "29",
+          issue: "11",
+          pages: "13929-13956",
           abstract: [
             "In this paper, we present an approach for online course evaluation based on learners' behaviors during the learning process, where the course creator can monitor the quality status of their online courses based on learners' learning outcomes and then intervene to improve the success rate. For this purpose, a set of criteria has been developed. These criteria concern learners' cognitive, affective and academic engagement. The proposed approach was adopted by a system consisting of four parts: a learning management system, a LOG preprocessing manager, a quality assessment manager, and a visualization and intervention manager. A first test was carried out on a sample of 33 students from the Department of Economics at the University of Guelma (Algeria), where the results obtained were very encouraging and promising."
           ]
@@ -398,12 +419,12 @@ export const cvData = {
         {
           authors: "Boudjehem, R., & Lafifi, Y.",
           year: "2021",
-          title: "A new approach to identify dropout learners based on their performance-based behavior.",
+          title: "A new approach to identify dropout learners based on their performance-based behavior",
           journal: "JUCS - Journal of Universal Computer Science",
           link: "https://doi.org/10.3897/jucs.74280",
           volume: "27",
-          issue: "1",
-          pages: "1-20",
+          issue: "10",
+          pages: "1001-1025",
           abstract: [
             "Distance learning environments are increasingly offering more comfort to both learners and teachers, allowing them to carry out their academic tasks remotely, especially in critical times where it is difficult, or even dangerous, to bring these actors together in one physical place. Nevertheless, These same environments are complaining about the massive dropout numbers among their learners. Therefore, designing new intelligent systems capable of reducing these numbers becomes imperative. This paper proposes a new approach capable of identifying and assisting endangered learners experiencing difficulties by monitoring and analyzing their behavior inside the e-learning environment. By building dynamic models to follow the learners’ current situation, the proposed approach could intervene autonomously to save learners identified as struggling. Relying on distributed artificial intelligence instead of humans to closely monitor learners within distance learning environments can be very effective when identifying struggling learners. Furthermore, targeting these learners with early enough and carefully designed interventions can reduce the number of dropouts."
           ]
@@ -416,12 +437,12 @@ export const cvData = {
         {
           authors: "Boudjehem, R., Benyounes, A., & Lafifi, Y.",
           year: "2023",
-          title: "LISS'nAP: A Peer-Advising Collaborative Learning Approach for Object-Oriented Programming Learning.",
+          title: "LISS'nAP: A Peer-Advising Collaborative Learning Approach for Object-Oriented Programming Learning",
           journal: "Acta Infologica",
           link: "https://doi.org/10.26650/acin.869786",
-          volume: "9",
+          volume: "7",
           issue: "1",
-          pages: "1-20",
+          pages: "197-207",
           abstract: [
             "Among the existing programming paradigms, two of them are the most familiar and the most used by the majority of programers: procedural programming and object-oriented programming. To teach students programming, most existing curricula, especially academic ones, begin by teaching the basics of procedural programming, before moving on to introduce the concepts of object-oriented programming. Unfortunately, this transition is not always smooth for students, and the concepts of object-oriented programming can be perceived as problematic and confusing for some students who have trouble adjusting to the new programming mode and fail to find a decent object-oriented model for a given problem. Some scientists believe that the problem lies in the transition of vision when modeling problems from one vision that is familiar to students to a new one that is object-oriented. Some scientists think that the problem lies in the transition itself when modeling problems from a familiar vision to a new object-oriented one. Other scientists claim that the problem may not reside in the object-oriented paradigm itself, but rather in the existing tools available to teach it, such as the languages and the environments. In this article, we propose a new collaborative learning method for learning object-oriented programming, which can be also used to teach any other course that shares a similar pedagogical structure."
           ]
@@ -612,7 +633,7 @@ export const cvData = {
     }
   ],
   languages: [
-    "English", "French", "Arabic"
+    "Arabic (native)", "French (B2, TCF)", "English (fluent)", "Spanish (beginner)"
   ],
   certificates: [
     "TCF Certificate (Test of French Knowledge), Level B2, French Cultural Center – Annaba (2006)"

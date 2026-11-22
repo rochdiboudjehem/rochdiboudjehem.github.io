@@ -238,16 +238,13 @@ function App() {
                                             <i className="fas fa-c icon" title="C" style={{ color: '#555' }} /> C
                                         </li>
                                         <li>
-                                            <i className="fab fa-python icon" title="Python" style={{ color: '#3776AB' }} /> Python
+                                            <i className="fab fa-python icon" title="Python" style={{ color: '#3776AB' }} /> Python (basic)
                                         </li>
                                         <li>
                                             <i className="fab fa-js-square icon" title="JavaScript" style={{ color: '#f7df1e' }} /> JavaScript
                                         </li>
                                         <li>
                                             <i className="fab fa-php icon" title="PHP" style={{ color: '#777bb4' }} /> PHP
-                                        </li>
-                                        <li>
-                                            <i className="fas fa-copyright icon" title="C++" style={{ color: '#00599C' }} /> C++
                                         </li>
                                         <li>
                                             <i className="fas fa-code icon" title="TypeScript" style={{ color: '#3178c6' }} /> TypeScript
@@ -260,6 +257,15 @@ function App() {
                                         </li>
                                         <li>
                                             <i className="fas fa-brain icon" title="Prolog" style={{ color: '#b22222' }} /> Prolog
+                                        </li>
+                                        <li>
+                                            <i className="fas fa-code icon" title="Pascal" style={{ color: '#2a5caa' }} /> Pascal
+                                        </li>
+                                        <li>
+                                            <i className="fas fa-code icon" title="Delphi" style={{ color: '#e62431' }} /> Delphi
+                                        </li>
+                                        <li>
+                                            <i className="fas fa-square-root-alt icon" title="Fortran" style={{ color: '#734f96' }} /> Fortran (basic)
                                         </li>
                                     </ul>
                                 </li>
@@ -319,7 +325,7 @@ function App() {
                                             <i className="fab fa-js-square icon" title="JavaScript" style={{ color: '#f7df1e' }} /> JavaScript
                                         </li>
                                         <li>
-                                            <i className="fab fa-react icon" title="React" style={{ color: '#61dafb' }} /> React
+                                            <i className="fab fa-react icon" title="React" style={{ color: '#61dafb' }} /> React (basic)
                                         </li>
                                         <li>
                                             <i className="fab fa-vuejs icon" title="Vue.js" style={{ color: '#42b883' }} /> Vue.js
@@ -333,6 +339,12 @@ function App() {
                                         <li>
                                             <i className="fas fa-dollar-sign icon" title="jQuery" style={{ color: '#0769ad' }} /> jQuery
                                         </li>
+                                        <li>
+                                            <i className="fab fa-java icon" title="JSP" style={{ color: '#007396' }} /> JSP
+                                        </li>
+                                        <li>
+                                            <i className="fab fa-microsoft icon" title="ASP (classic)" style={{ color: '#512bd4' }} /> ASP (classic)
+                                        </li>
                                     </ul>
                                 </li>
                                 <li>
@@ -340,10 +352,28 @@ function App() {
                                     <b>Databases:</b>
                                     <ul style={{ marginLeft: 20 }}>
                                         <li>
+                                            <i className="fas fa-table icon" title="SQL" style={{ color: '#336791' }} /> SQL
+                                        </li>
+                                        <li>
                                             <i className="fas fa-database icon" title="MySQL" style={{ color: '#4479A1' }} /> MySQL
                                         </li>
                                         <li>
                                             <i className="fas fa-feather-alt icon" title="SQLite" style={{ color: '#003B57' }} /> SQLite
+                                        </li>
+                                        <li>
+                                            <i className="fas fa-database icon" title="MS Access" style={{ color: '#a4373a' }} /> MS Access
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <i className="fas fa-sitemap icon" />
+                                    <b>Modelling & Design Methods:</b>
+                                    <ul style={{ marginLeft: 20 }}>
+                                        <li>
+                                            <i className="fas fa-project-diagram icon" title="Merise" style={{ color: '#2c3e50' }} /> Merise
+                                        </li>
+                                        <li>
+                                            <i className="fas fa-diagram-project icon" title="UML" style={{ color: '#1976d2' }} /> UML (use case and flow diagrams)
                                         </li>
                                     </ul>
                                 </li>
@@ -361,10 +391,13 @@ function App() {
                                             <i className="fas fa-shipping-fast icon" title="Express.js" style={{ color: '#68a063' }} /> Express.js
                                         </li>
                                         <li>
-                                            <i className="fab fa-react icon" title="React" style={{ color: '#61dafb' }} /> React
+                                            <i className="fab fa-react icon" title="React" style={{ color: '#61dafb' }} /> React (basic)
                                         </li>
                                         <li>
-                                            <i className="fab fa-angular icon" title="Angular" style={{ color: '#dd0031' }} /> Angular
+                                            <i className="fab fa-angular icon" title="Angular" style={{ color: '#dd0031' }} /> Angular (basic)
+                                        </li>
+                                        <li>
+                                            <i className="fab fa-java icon" title="Java RMI" style={{ color: '#007396' }} /> Java RMI
                                         </li>
                                         <li>
                                             <i className="fas fa-paw icon" title="Pandas" style={{ color: '#150458' }} /> Pandas
@@ -382,19 +415,16 @@ function App() {
                                     <b>Graphic Design:</b>
                                     <ul style={{ marginLeft: 20 }}>
                                         <li>
-                                            <img src="/vite-cv/images/brand/photoshop.svg" alt="Adobe Photoshop" title="Adobe Photoshop" style={{ width: 20, height: 20, verticalAlign: 'middle', marginRight: 6 }} /> Adobe Photoshop
+                                            <img src="/images/brand/photoshop.svg" alt="Adobe Photoshop" title="Adobe Photoshop" style={{ width: 20, height: 20, verticalAlign: 'middle', marginRight: 6 }} /> Adobe Photoshop
                                         </li>
                                         <li>
-                                            <img src="/vite-cv/images/brand/audacity.png" alt="Audacity" title="Audacity" style={{ width: 20, height: 20, verticalAlign: 'middle', marginRight: 6 }} /> Audacity
+                                            <img src="/images/brand/gimp.svg" alt="GIMP" title="GIMP" style={{ width: 20, height: 20, verticalAlign: 'middle', marginRight: 6 }} /> GIMP
                                         </li>
                                         <li>
-                                            <img src="/vite-cv/images/brand/gimp.png" alt="GIMP" title="GIMP" style={{ width: 20, height: 20, verticalAlign: 'middle', marginRight: 6 }} /> GIMP
+                                            <img src="/images/brand/3dsmax.png" alt="3DS Max" title="3DS Max" style={{ width: 20, height: 20, verticalAlign: 'middle', marginRight: 6 }} /> 3D Studio Max
                                         </li>
                                         <li>
-                                            <img src="/vite-cv/images/brand/3dsmax.png" alt="3DS Max" title="3DS Max" style={{ width: 20, height: 20, verticalAlign: 'middle', marginRight: 6 }} /> 3D Studio Max
-                                        </li>
-                                        <li>
-                                            <img src="/vite-cv/images/brand/blender.png" alt="Blender" title="Blender" style={{ width: 20, height: 20, verticalAlign: 'middle', marginRight: 6 }} /> Blender
+                                            <img src="/images/brand/blender.svg" alt="Blender" title="Blender" style={{ width: 20, height: 20, verticalAlign: 'middle', marginRight: 6 }} /> Blender
                                         </li>
                                     </ul>
                                 </li>
@@ -561,18 +591,6 @@ function App() {
                                         <li>
                                             <i className="fas fa-circle icon" title="Eclipse" style={{ color: '#2c2255' }} /> Eclipse
                                         </li>
-                                        <li>
-                                            <i className="ai ai-overleaf icon" title="Overleaf" style={{ color: '#47A141' }} /> Overleaf
-                                        </li>
-                                        <li>
-                                            <i className="fas fa-book-medical icon" title="EndNote" style={{ color: '#c60c30' }} /> EndNote
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <i className="fas fa-cloud icon" />
-                                    <b>Cloud & DevOps:</b>
-                                    <ul style={{ marginLeft: 20 }}>
                                         <li>
                                             <i className="ai ai-overleaf icon" title="Overleaf" style={{ color: '#47A141' }} /> Overleaf
                                         </li>
